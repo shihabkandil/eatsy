@@ -1,0 +1,33 @@
+name: Flutter Workflow
+
+on:
+  push:
+    branches:
+      - development
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '3.7.10'
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Run static analysis and checks
+        run: flutter analyze
+
+      - name: Run tests
+        if: steps.check_files.outputs.files_exists == 'true'
+        run: |
+          # run tests if `test` folder exists
+          if [ -d test ]
+          then
+              flutter test -r expanded
+          else
+              echo "Tests not found."
+          fi
