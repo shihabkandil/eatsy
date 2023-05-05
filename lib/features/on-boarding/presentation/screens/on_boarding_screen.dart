@@ -12,7 +12,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: 'Login',
+      finishButtonText: 'Next',
       onFinish: () {
         ///TODO Navigate to LoginRoute implementation
       },
