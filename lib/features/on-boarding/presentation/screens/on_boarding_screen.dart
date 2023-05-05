@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:food_ninja/common/constants/app_colors.dart';
@@ -6,6 +7,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../widgets/on_boarding_body.dart';
 
+@RoutePage()
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
 
