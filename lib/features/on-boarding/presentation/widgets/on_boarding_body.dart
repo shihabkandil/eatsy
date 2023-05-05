@@ -26,13 +26,16 @@ class OnBoardingBody extends StatelessWidget {
           height: 48.sh,
         ),
         SizedBox(height: 5.sh),
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: AppColors.lightGreen,
-            fontSize: 3.sh,
-            fontWeight: FontWeight.w600,
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 3.sw),
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppColors.lightGreen,
+              fontSize: 3.sh,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         SizedBox(

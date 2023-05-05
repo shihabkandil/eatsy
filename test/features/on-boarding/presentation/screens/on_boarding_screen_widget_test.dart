@@ -63,7 +63,7 @@ void main() {
       expect(onBoardingSliderWidget.totalPage, equals(2));
       expect(
         onBoardingSliderWidget.finishButtonText,
-        equals('Login'),
+        equals('Next'),
       );
       expect(
         onBoardingSliderWidget.controllerColor,
