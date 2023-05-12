@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:food_ninja/common/constants/app_colors.dart';
-import 'package:food_ninja/common/constants/image_path.dart';
-import 'package:food_ninja/features/on-boarding/presentation/screens/on_boarding_screen.dart';
-import 'package:food_ninja/features/on-boarding/presentation/widgets/on_boarding_body.dart';
+import 'package:food_ninja/common/constants/image_paths.dart';
+import 'package:food_ninja/features/on_boarding/presentation/screens/on_boarding_screen.dart';
+import 'package:food_ninja/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
@@ -119,7 +119,7 @@ void main() {
       );
       expect(
         firstPageBodyWidget.imagePath,
-        equals(ImagePath.firstOnBoarding),
+        equals(ImagePaths.firstOnBoarding),
       );
 
       final secondPageBodyWidget = pageBodiesListWidget[1] as OnBoardingBody;
@@ -133,7 +133,7 @@ void main() {
       );
       expect(
         secondPageBodyWidget.imagePath,
-        equals(ImagePath.secondOnBoarding),
+        equals(ImagePaths.secondOnBoarding),
       );
     });
   });
