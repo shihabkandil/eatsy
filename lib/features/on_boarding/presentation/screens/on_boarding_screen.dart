@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:food_ninja/common/constants/app_strings.dart';
 import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -15,7 +16,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: 'Next',
+      finishButtonText: AppStrings.nextText,
       onFinish: () {
         context.router.replace(const LoginRoute());
       },
@@ -34,15 +35,14 @@ class OnBoardingScreen extends StatelessWidget {
       speed: 1.8,
       pageBodies: const [
         OnBoardingBody(
-          title: 'Find your Comfort Food here',
-          subTitle:
-              'Here You Can find a chef or dish for every taste and color. Enjoy!',
+          title: AppStrings.firstOnBoardingHeaderTitle,
+          subTitle: AppStrings.firstOnBoardingHeaderSubTitle,
           imagePath: ImagePaths.firstOnBoarding,
         ),
         OnBoardingBody(
           imagePath: ImagePaths.secondOnBoarding,
-          title: 'Food Ninja is Where Your Comfort Food Lives',
-          subTitle: 'Enjoy a fast and smooth food delivery at your doorstep',
+          title: AppStrings.secondOnBoardingHeaderTitle,
+          subTitle: AppStrings.secondOnBoardingHeaderSubTitle,
         ),
       ],
     );
