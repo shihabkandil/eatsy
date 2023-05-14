@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
@@ -18,7 +17,7 @@ class OnBoardingScreen extends StatelessWidget {
     return OnBoardingSlider(
       finishButtonText: 'Next',
       onFinish: () {
-        context.router.popAndPush(const LoginRoute());
+        context.router.replace(const LoginRoute());
       },
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
