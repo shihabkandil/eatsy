@@ -7,30 +7,34 @@ void main() {
   group('Test CustomAuthTextFormField', () {
     testWidgets('Renders with HintText', (widgetTester) async {
       String hintText = 'Hint Sample Text';
-      await widgetTester.pumpWidget(ResponsiveApp(builder: (context) {
-        return const MaterialApp(
-          home: Scaffold(
-            body: CustomAuthTextFormField(
-              hintText: 'Hint Sample Text',
+      await widgetTester.pumpWidget(
+        ResponsiveApp(builder: (context) {
+          return const MaterialApp(
+            home: Scaffold(
+              body: CustomAuthTextFormField(
+                hintText: 'Hint Sample Text',
+              ),
             ),
-          ),
-        );
-      }));
+          );
+        }),
+      );
       expect(find.text(hintText), findsOneWidget);
     });
 
     testWidgets('OnChangedCallback', (widgetTester) async {
       String changedText = '';
 
-      await widgetTester.pumpWidget(ResponsiveApp(builder: (context) {
-        return MaterialApp(
-          home: Scaffold(
-            body: CustomAuthTextFormField(
-              onChanged: (value) => changedText = value,
+      await widgetTester.pumpWidget(
+        ResponsiveApp(builder: (context) {
+          return MaterialApp(
+            home: Scaffold(
+              body: CustomAuthTextFormField(
+                onChanged: (value) => changedText = value,
+              ),
             ),
-          ),
-        );
-      }));
+          );
+        }),
+      );
 
       await widgetTester.enterText(find.byType(TextFormField), 'Hello World');
 
@@ -40,15 +44,17 @@ void main() {
     testWidgets('OnSubmittedCallback', (widgetTester) async {
       String submittedText = '';
 
-      await widgetTester.pumpWidget(ResponsiveApp(builder: (context) {
-        return MaterialApp(
-          home: Scaffold(
-            body: CustomAuthTextFormField(
-              onSubmitted: (value) => submittedText = value,
+      await widgetTester.pumpWidget(
+        ResponsiveApp(builder: (context) {
+          return MaterialApp(
+            home: Scaffold(
+              body: CustomAuthTextFormField(
+                onSubmitted: (value) => submittedText = value,
+              ),
             ),
-          ),
-        );
-      }));
+          );
+        }),
+      );
       await widgetTester.enterText(
           find.byType(TextFormField), 'Submitted Text Sample');
       await widgetTester.testTextInput.receiveAction(TextInputAction.done);

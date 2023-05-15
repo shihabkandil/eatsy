@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:food_ninja/common/constants/app_colors.dart';
-import 'package:food_ninja/common/constants/image_paths.dart';
+import 'package:food_ninja/common/constants/assets_paths.dart';
 import 'package:food_ninja/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -9,7 +9,7 @@ void main() {
   testWidgets('OnBoardingBody Widget', (widgetTester) async {
     const String title = 'Title Text';
     const String subTitle = 'subTitle Text';
-    const String imagePath = ImagePaths.firstOnBoarding;
+    const String imagePath = AssetsPaths.firstOnBoarding;
 
     await widgetTester.pumpWidget(ResponsiveApp(
       builder: (_) => const MaterialApp(

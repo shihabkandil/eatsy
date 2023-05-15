@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../../../common/constants/image_paths.dart';
+import '../../../../common/constants/assets_paths.dart';
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({Key? key, required this.text}) : super(key: key);
@@ -13,7 +13,7 @@ class AuthHeader extends StatelessWidget {
       children: [
         Image.asset(
           width: 50.screenWidth,
-          ImagePaths.logo,
+          AssetsPaths.logo,
         ),
         SizedBox(
           height: 4.sh,

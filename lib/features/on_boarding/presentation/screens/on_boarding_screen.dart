@@ -6,7 +6,7 @@ import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
-import '../../../../common/constants/image_paths.dart';
+import '../../../../common/constants/assets_paths.dart';
 import '../widgets/on_boarding_body.dart';
 
 @RoutePage()
@@ -37,10 +37,10 @@ class OnBoardingScreen extends StatelessWidget {
         OnBoardingBody(
           title: AppStrings.firstOnBoardingHeaderTitle,
           subTitle: AppStrings.firstOnBoardingHeaderSubTitle,
-          imagePath: ImagePaths.firstOnBoarding,
+          imagePath: AssetsPaths.firstOnBoarding,
         ),
         OnBoardingBody(
-          imagePath: ImagePaths.secondOnBoarding,
+          imagePath: AssetsPaths.secondOnBoarding,
           title: AppStrings.secondOnBoardingHeaderTitle,
           subTitle: AppStrings.secondOnBoardingHeaderSubTitle,
         ),
