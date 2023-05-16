@@ -12,6 +12,7 @@ class App extends StatelessWidget {
       builder: (context) => MaterialApp.router(
         debugShowCheckedModeBanner: true,
         routerConfig: appRouter.config(),
+        theme: ThemeData(fontFamily: 'Poppins'),
       ),
     );
   }

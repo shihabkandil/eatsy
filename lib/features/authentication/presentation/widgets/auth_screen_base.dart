@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/assets_paths.dart';
 
 class AuthScreenBase extends StatelessWidget {
@@ -12,6 +13,7 @@ class AuthScreenBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteBackground,
       body: Stack(
         alignment: alignment,
         children: [
@@ -22,6 +24,7 @@ class AuthScreenBase extends StatelessWidget {
                 image: AssetImage(
                   AssetsPaths.lightSplashPattern,
                 ),
+                opacity: 0.6,
                 fit: BoxFit.cover,
               ),
             ),

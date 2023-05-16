@@ -8,6 +8,7 @@ class AssetsPaths {
       'assets/images/illustrations/onBoarding2.png';
 
   static const String messageSvgIcon = 'assets/icons/Message.svg';
-
   static const String lockSvgIcon = 'assets/icons/Lock.svg';
+  static const String googleSvgIcon = 'assets/icons/google.svg';
+  static const String facebookSvgIcon = 'assets/icons/facebook.svg';
 }

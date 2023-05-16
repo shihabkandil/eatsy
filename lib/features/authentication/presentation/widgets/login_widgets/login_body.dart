@@ -5,6 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../../../../../common/constants/app_strings.dart';
 import '../auth_header.dart';
 import '../custom_auth_text_form_field.dart';
+import 'social_auth_button.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class LoginBody extends StatelessWidget {
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const AuthHeader(text: AppStrings.loginScreenHeader),
@@ -38,15 +39,38 @@ class LoginBody extends StatelessWidget {
                   isObscureText: true,
                   prefixIconSvgPath: AssetsPaths.lockSvgIcon,
                 ),
-                SizedBox(
-                  height: 2.sh,
-                ),
               ],
             ),
           ),
           Align(
             alignment: Alignment.center,
-            child: Text(AppStrings.orContinueText),
+            child: Text(
+              AppStrings.orContinueText,
+              style: TextStyle(
+                fontSize: 2.sh,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 2.sh,
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SocialAuthButton(
+                text: AppStrings.google,
+                assetPath: AssetsPaths.googleSvgIcon,
+              ),
+              SizedBox(
+                width: 4.sw,
+              ),
+              const SocialAuthButton(
+                text: AppStrings.facebook,
+                assetPath: AssetsPaths.facebookSvgIcon,
+              ),
+            ],
           )
         ],
       ),
