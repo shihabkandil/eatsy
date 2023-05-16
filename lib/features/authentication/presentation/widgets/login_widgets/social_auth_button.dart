@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/common/constants/app_colors.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../../../../common/constants/app_colors.dart';
 
 class SocialAuthButton extends StatelessWidget {
   const SocialAuthButton({
@@ -17,7 +18,7 @@ class SocialAuthButton extends StatelessWidget {
     return MaterialButton(
       color: Colors.white,
       height: 6.5.sh,
-      elevation: 0.5,
+      elevation: 0,
       focusElevation: 0,
       highlightElevation: 0,
       splashColor: AppColors.lightGreen.withOpacity(0.25),
@@ -26,8 +27,8 @@ class SocialAuthButton extends StatelessWidget {
           2.sh,
         ),
         side: BorderSide(
-          color: Colors.black12,
-          width: 0.4.sw,
+          color: Colors.black.withOpacity(0.1),
+          width: 0.25.sw,
         ),
       ),
       onPressed: () {},

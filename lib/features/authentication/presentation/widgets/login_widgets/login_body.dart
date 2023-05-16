@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/common/constants/assets_paths.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../../../../common/constants/app_colors.dart';
 import '../../../../../common/constants/app_strings.dart';
+import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../common/widgets/gradient_text.dart';
 import '../auth_header.dart';
 import '../custom_auth_text_form_field.dart';
 import 'social_auth_button.dart';
@@ -71,8 +74,32 @@ class LoginBody extends StatelessWidget {
                 assetPath: AssetsPaths.facebookSvgIcon,
               ),
             ],
+          ),
+          SizedBox(
+            height: 2.sh,
+          ),
+          _forgotPasswordText(),
+          SizedBox(
+            height: 2.sh,
+          ),
+          const CustomButton(
+            text: 'Login',
           )
         ],
+      ),
+    );
+  }
+
+  Widget _forgotPasswordText() {
+    return InkWell(
+      onTap: () {},
+      child: const GradientText(
+        text: AppStrings.forgotYourPassword,
+        style: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: AppColors.lightGreen,
+            decoration: TextDecoration.underline),
+        gradient: AppColors.greenGradient,
       ),
     );
   }

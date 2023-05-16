@@ -5,7 +5,7 @@ class AppStrings {
   static const passwordHint = 'Password';
   static const keepMeSigned = 'Keep Me Signed In';
   static const orContinueText = 'Or Continue With';
-  static const forgotYourPassword = 'Forgot Your Password';
+  static const forgotYourPassword = 'Forgot Your Password?';
   static const nextText = 'Next';
   static const firstOnBoardingHeaderTitle = 'Find your Comfort Food here';
   static const firstOnBoardingHeaderSubTitle =
