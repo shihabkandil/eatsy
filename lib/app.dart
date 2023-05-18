@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'features/on-boarding/presentation/screens/on_boarding_screen.dart';
-
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  const App({Key? key, required this.appRouter}) : super(key: key);
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveApp(
-      builder: (context) => MaterialApp(
+      builder: (context) => MaterialApp.router(
         debugShowCheckedModeBanner: true,
-        builder: (context, child) => const OnBoardingScreen(),
+        routerConfig: appRouter.config(),
+        theme: ThemeData(fontFamily: 'Poppins'),
       ),
     );
   }

@@ -1,10 +1,12 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:food_ninja/common/constants/app_strings.dart';
+import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
-import '../../../../common/constants/image_path.dart';
+import '../../../../common/constants/assets_paths.dart';
 import '../widgets/on_boarding_body.dart';
 
 @RoutePage()
@@ -14,9 +16,9 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: 'Next',
+      finishButtonText: AppStrings.nextText,
       onFinish: () {
-        ///TODO Navigate to LoginRoute implementation
+        context.router.replace(const LoginRoute());
       },
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
@@ -33,15 +35,14 @@ class OnBoardingScreen extends StatelessWidget {
       speed: 1.8,
       pageBodies: const [
         OnBoardingBody(
-          title: 'Find your Comfort Food here',
-          subTitle:
-              'Here You Can find a chef or dish for every taste and color. Enjoy!',
-          imagePath: ImagePath.firstOnBoarding,
+          title: AppStrings.firstOnBoardingHeaderTitle,
+          subTitle: AppStrings.firstOnBoardingHeaderSubTitle,
+          imagePath: AssetsPaths.firstOnBoarding,
         ),
         OnBoardingBody(
-          imagePath: ImagePath.secondOnBoarding,
-          title: 'Food Ninja is Where Your Comfort Food Lives',
-          subTitle: 'Enjoy a fast and smooth food delivery at your doorstep',
+          imagePath: AssetsPaths.secondOnBoarding,
+          title: AppStrings.secondOnBoardingHeaderTitle,
+          subTitle: AppStrings.secondOnBoardingHeaderSubTitle,
         ),
       ],
     );
