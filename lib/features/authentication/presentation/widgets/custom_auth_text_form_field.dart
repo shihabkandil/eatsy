@@ -12,12 +12,14 @@ class CustomAuthTextFormField extends StatelessWidget {
     this.onSubmitted,
     this.isObscureText = false,
     this.prefixIconSvgPath,
+    this.focusNode,
   }) : super(key: key);
   final String? hintText;
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
   final bool isObscureText;
   final String? prefixIconSvgPath;
+  final FocusNode? focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,8 @@ class CustomAuthTextFormField extends StatelessWidget {
       elevation: 1,
       shape: RoundedRectangleBorder(borderRadius: _getBorderRadius()),
       child: TextFormField(
+        focusNode: focusNode,
+        style: TextStyle(fontSize: 1.75.sh),
         onChanged: onChanged,
         onFieldSubmitted: onSubmitted,
         maxLines: 1,

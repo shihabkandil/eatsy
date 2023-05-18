@@ -1,24 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:food_ninja/features/authentication/presentation/widgets/custom_auth_text_form_field.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   group('Test CustomAuthTextFormField', () {
-    testWidgets('Renders with HintText', (widgetTester) async {
-      String hintText = 'Hint Sample Text';
+    testWidgets('check properties', (widgetTester) async {
+      const String sampleText = "Hint Sample";
+      final FocusNode focusNode = FocusNode();
+      const String assetPath = 'assets/icons/profile.svg';
+      const bool isObscureText = true;
       await widgetTester.pumpWidget(
         ResponsiveApp(builder: (context) {
-          return const MaterialApp(
+          return MaterialApp(
             home: Scaffold(
               body: CustomAuthTextFormField(
-                hintText: 'Hint Sample Text',
+                hintText: sampleText,
+                focusNode: focusNode,
+                prefixIconSvgPath: assetPath,
+                isObscureText: isObscureText,
               ),
             ),
           );
         }),
       );
-      expect(find.text(hintText), findsOneWidget);
+      expect(find.text(sampleText), findsOneWidget);
+      final svgIconFinder = find.byType(SvgPicture);
+      expect(svgIconFinder, findsOneWidget);
+      final svgRenderObject = widgetTester.renderObject(svgIconFinder);
+      expect(svgRenderObject, isNotNull);
+
+      expect(focusNode.hasFocus, false);
+      await widgetTester.tap(find.byType(TextFormField));
+      await widgetTester.pump();
+      expect(focusNode.hasFocus, true);
     });
 
     testWidgets('OnChangedCallback', (widgetTester) async {

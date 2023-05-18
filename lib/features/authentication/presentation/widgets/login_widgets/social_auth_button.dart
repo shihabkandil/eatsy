@@ -9,9 +9,11 @@ class SocialAuthButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.assetPath,
+    required this.onPressed,
   }) : super(key: key);
   final String text;
   final String assetPath;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class SocialAuthButton extends StatelessWidget {
           width: 0.25.sw,
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         children: [
           SvgPicture.asset(assetPath, width: 4.sh),
@@ -40,7 +42,7 @@ class SocialAuthButton extends StatelessWidget {
           ),
           Text(
             text,
-            style: TextStyle(fontSize: 2.4.sh, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: 2.sh, fontWeight: FontWeight.w500),
           ),
         ],
       ),
