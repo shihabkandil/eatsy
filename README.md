@@ -1,4 +1,6 @@
-# Food Ninja Application
+# Eatsy food delivery application
+
+![alt text](https://github.com/shihabkandil/eatsy/blob/development/image.jpg?raw=true)
 
 A Food delivery application developed using Flutter framework and Firebase.
 Using Feature-Driven Architecture. To manage the app's state, the Bloc state management pattern is used, with separate BLoCs for each feature. The app uses the auto_route package for declarative routing, allowing for easy navigation between screens.
