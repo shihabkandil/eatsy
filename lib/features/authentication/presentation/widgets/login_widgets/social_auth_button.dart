@@ -22,6 +22,7 @@ class SocialAuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      width: 80.screenWidth,
       child: MaterialButton(
         color: background,
         height: 6.sh,
