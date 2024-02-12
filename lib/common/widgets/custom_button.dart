@@ -27,8 +27,8 @@ class CustomButton extends StatelessWidget {
             gradient: AppColors.greenGradient),
         child: Container(
           padding: EdgeInsets.symmetric(
-            horizontal: 6.sh,
-            vertical: 2.sh,
+            horizontal: 14.sw,
+            vertical: 1.25.sh,
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(

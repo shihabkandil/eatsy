@@ -11,12 +11,14 @@ class AuthHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          width: 50.screenWidth,
-          AssetsPaths.logo,
-        ),
         SizedBox(
-          height: 4.sh,
+          height: 28.screenHeight,
+          child: Transform.scale(
+            scale: 1.6,
+            child: Image.asset(
+              AssetsPaths.logo,
+            ),
+          ),
         ),
         Text(
           text,
