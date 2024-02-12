@@ -45,15 +45,22 @@ class LoginBody extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: 1.6.sh,
+                  height: 2.2.sh,
+                ),
+                CustomButton(
+                  text: AppStrings.login,
+                  onPressed: () {},
+                ),
+                SizedBox(
+                  height: 2.sh,
                 ),
                 Align(
                   alignment: Alignment.center,
                   child: Text(
                     AppStrings.orContinueText,
                     style: TextStyle(
-                      fontSize: 2.sh,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 1.6.sh,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -64,7 +71,7 @@ class LoginBody extends StatelessWidget {
                   onPressed: () {
                     //TODO GoogleSignIn
                   },
-                  text: AppStrings.google,
+                  text: AppStrings.googleSignIn,
                   assetPath: AssetsPaths.googleSvgIcon,
                 ),
                 SizedBox(
@@ -74,15 +81,10 @@ class LoginBody extends StatelessWidget {
                   onPressed: () {
                     ///TODO Facebook SignIn
                   },
-                  text: AppStrings.facebook,
-                  assetPath: AssetsPaths.facebookSvgIcon,
-                ),
-                SizedBox(
-                  height: 2.sh,
-                ),
-                CustomButton(
-                  text: AppStrings.login,
-                  onPressed: () => context.pushRoute(const RegisterRoute()),
+                  text: AppStrings.appleSignIn,
+                  assetPath: AssetsPaths.appleSvgIcon,
+                  background: Colors.black,
+                  textColor: Colors.white,
                 ),
                 SizedBox(
                   height: 2.sh,

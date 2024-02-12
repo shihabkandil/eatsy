@@ -10,6 +10,6 @@ class AssetsPaths {
   static const String messageSvgIcon = 'assets/icons/message.svg';
   static const String lockSvgIcon = 'assets/icons/lock.svg';
   static const String googleSvgIcon = 'assets/icons/google.svg';
-  static const String facebookSvgIcon = 'assets/icons/facebook.svg';
+  static const String appleSvgIcon = 'assets/icons/apple.svg';
   static const String profileSvgIcon = 'assets/icons/profile.svg';
 }
