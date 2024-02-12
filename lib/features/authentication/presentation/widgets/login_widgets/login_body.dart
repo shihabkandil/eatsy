@@ -4,9 +4,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/router/app_router.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../../../../../common/widgets/custom_button.dart';
-import '../../../../../utils/app_router.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -60,28 +60,22 @@ class LoginBody extends StatelessWidget {
                 SizedBox(
                   height: 2.sh,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocialAuthButton(
-                      onPressed: () {
-                        //TODO GoogleSignIn
-                      },
-                      text: AppStrings.google,
-                      assetPath: AssetsPaths.googleSvgIcon,
-                    ),
-                    SizedBox(
-                      width: 4.sw,
-                    ),
-                    SocialAuthButton(
-                      onPressed: () {
-                        ///TODO Facebook SignIn
-                      },
-                      text: AppStrings.facebook,
-                      assetPath: AssetsPaths.facebookSvgIcon,
-                    ),
-                  ],
+                SocialAuthButton(
+                  onPressed: () {
+                    //TODO GoogleSignIn
+                  },
+                  text: AppStrings.google,
+                  assetPath: AssetsPaths.googleSvgIcon,
+                ),
+                SizedBox(
+                  height: 4.sw,
+                ),
+                SocialAuthButton(
+                  onPressed: () {
+                    ///TODO Facebook SignIn
+                  },
+                  text: AppStrings.facebook,
+                  assetPath: AssetsPaths.facebookSvgIcon,
                 ),
                 SizedBox(
                   height: 2.sh,

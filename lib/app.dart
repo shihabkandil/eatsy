@@ -1,6 +1,7 @@
-import 'package:eatsy/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'common/router/app_router.dart';
 
 class App extends StatelessWidget {
   const App({Key? key, required this.appRouter}) : super(key: key);
