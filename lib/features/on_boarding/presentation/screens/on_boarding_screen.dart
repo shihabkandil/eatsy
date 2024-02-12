@@ -6,7 +6,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/app_strings.dart';
 import '../../../../common/constants/assets_paths.dart';
-import '../../../../utils/app_router.dart';
+import '../../../../common/router/app_router.dart';
 import '../widgets/on_boarding_body.dart';
 
 @RoutePage()

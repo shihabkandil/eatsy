@@ -16,8 +16,8 @@ class AppStrings {
       'Food Ninja is Where Your Comfort Food Lives';
   static const secondOnBoardingHeaderSubTitle =
       'Enjoy a fast and smooth food delivery at your doorstep';
-  static const google = 'Google';
-  static const facebook = 'Facebook';
+  static const googleSignIn = 'Sign in with Google';
+  static const appleSignIn = 'Sign in with Apple';
   static const login = 'Login';
   static const register = 'Register';
 }

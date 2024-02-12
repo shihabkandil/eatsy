@@ -4,9 +4,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/router/app_router.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../../../../../common/widgets/custom_button.dart';
-import '../../../../../utils/app_router.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -45,50 +45,46 @@ class LoginBody extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: 1.6.sh,
+                  height: 2.2.sh,
+                ),
+                CustomButton(
+                  text: AppStrings.login,
+                  onPressed: () {},
+                ),
+                SizedBox(
+                  height: 2.sh,
                 ),
                 Align(
                   alignment: Alignment.center,
                   child: Text(
                     AppStrings.orContinueText,
                     style: TextStyle(
-                      fontSize: 2.sh,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 1.6.sh,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 2.sh,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocialAuthButton(
-                      onPressed: () {
-                        //TODO GoogleSignIn
-                      },
-                      text: AppStrings.google,
-                      assetPath: AssetsPaths.googleSvgIcon,
-                    ),
-                    SizedBox(
-                      width: 4.sw,
-                    ),
-                    SocialAuthButton(
-                      onPressed: () {
-                        ///TODO Facebook SignIn
-                      },
-                      text: AppStrings.facebook,
-                      assetPath: AssetsPaths.facebookSvgIcon,
-                    ),
-                  ],
+                SocialAuthButton(
+                  onPressed: () {
+                    //TODO GoogleSignIn
+                  },
+                  text: AppStrings.googleSignIn,
+                  assetPath: AssetsPaths.googleSvgIcon,
                 ),
                 SizedBox(
-                  height: 2.sh,
+                  height: 4.sw,
                 ),
-                CustomButton(
-                  text: AppStrings.login,
-                  onPressed: () => context.pushRoute(const RegisterRoute()),
+                SocialAuthButton(
+                  onPressed: () {
+                    ///TODO Facebook SignIn
+                  },
+                  text: AppStrings.appleSignIn,
+                  assetPath: AssetsPaths.appleSvgIcon,
+                  background: Colors.black,
+                  textColor: Colors.white,
                 ),
                 SizedBox(
                   height: 2.sh,

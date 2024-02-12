@@ -21,9 +21,11 @@ class OnBoardingBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Image.asset(
-          imagePath,
-          height: 48.sh,
+        Expanded(
+          flex: 2,
+          child: Image.asset(
+            imagePath,
+          ),
         ),
         SizedBox(height: 5.sh),
         Padding(
@@ -41,15 +43,17 @@ class OnBoardingBody extends StatelessWidget {
         SizedBox(
           height: 2.sh,
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.sw),
-          child: Text(
-            subTitle,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.black38,
-              fontSize: 2.5.sh,
-              fontWeight: FontWeight.w500,
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 3.sw),
+            child: Text(
+              subTitle,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black38,
+                fontSize: 2.5.sh,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ),
