@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/illustrations/
+    - assets/images/logo/
     - assets/icons/
 
   # in this "flutter" section. Each entry in this list should have a

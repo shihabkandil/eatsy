@@ -1,5 +1,5 @@
 class AssetsPaths {
-  static const String logo = 'assets/images/logo_green.png';
+  static const String logo = 'assets/images/logo/logo_green.png';
   static const String lightSplashPattern =
       'assets/images/light_splash_pattern.png';
   static const String firstOnBoarding =
