@@ -1,6 +1,6 @@
+import 'package:eatsy/common/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:food_ninja/common/widgets/custom_button.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {

@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
-import 'package:food_ninja/common/constants/app_strings.dart';
-import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
+import '../../../../common/constants/app_strings.dart';
 import '../../../../common/constants/assets_paths.dart';
+import '../../../../utils/app_router.dart';
 import '../widgets/on_boarding_body.dart';
 
 @RoutePage()
@@ -17,9 +17,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnBoardingSlider(
       finishButtonText: AppStrings.nextText,
-      onFinish: () {
-        context.router.replace(const LoginRoute());
-      },
+      onFinish: () => context.router.replace(const LoginRoute()),
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
         shape: RoundedRectangleBorder(

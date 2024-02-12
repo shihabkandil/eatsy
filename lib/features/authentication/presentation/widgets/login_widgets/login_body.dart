@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/common/widgets/clickable_text.dart';
-import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/widgets/clickable_text.dart';
 import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../utils/app_router.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -88,9 +88,7 @@ class LoginBody extends StatelessWidget {
                 ),
                 CustomButton(
                   text: AppStrings.login,
-                  onPressed: () => context.pushRoute(
-                    const RegisterRoute(),
-                  ),
+                  onPressed: () => context.pushRoute(const RegisterRoute()),
                 ),
                 SizedBox(
                   height: 2.sh,
