@@ -22,6 +22,8 @@ class ClickableText extends StatelessWidget {
       alignment: alignment,
       child: InkWell(
         onTap: onTap,
+        splashFactory: NoSplash.splashFactory,
+        highlightColor: Colors.transparent,
         child: GradientText(
           text: text,
           style: textStyle ??
