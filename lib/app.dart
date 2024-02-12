@@ -1,5 +1,5 @@
+import 'package:eatsy/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/utils/app_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class App extends StatelessWidget {

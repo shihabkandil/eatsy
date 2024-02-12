@@ -1,8 +1,8 @@
+import 'package:eatsy/features/authentication/presentation/widgets/custom_auth_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:food_ninja/features/authentication/presentation/widgets/custom_auth_text_form_field.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {

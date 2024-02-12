@@ -1,8 +1,8 @@
+import 'package:eatsy/common/constants/app_colors.dart';
+import 'package:eatsy/common/constants/assets_paths.dart';
+import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:food_ninja/common/constants/app_colors.dart';
-import 'package:food_ninja/common/constants/assets_paths.dart';
-import 'package:food_ninja/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
