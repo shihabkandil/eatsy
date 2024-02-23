@@ -30,7 +30,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
-      elevation: 1,
+      elevation: 0.25,
       shape: RoundedRectangleBorder(borderRadius: _getBorderRadius()),
       child: TextFormField(
         focusNode: widget.focusNode,
@@ -57,7 +57,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
-            borderSide: BorderSide(color: Colors.black12, width: 0.25.sw),
+            borderSide: BorderSide(color: Colors.black12, width: 0.15.sw),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
