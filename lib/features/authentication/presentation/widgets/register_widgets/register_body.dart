@@ -1,11 +1,12 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:eatsy/features/authentication/presentation/widgets/register_widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
-import '../../../../../common/constants/assets_paths.dart';
 import '../../../../../common/widgets/app_button.dart';
+import '../../../../../common/widgets/clickable_text.dart';
 import '../auth_header.dart';
-import '../../../../../common/widgets/app_text_form_field.dart';
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({Key? key}) : super(key: key);
@@ -29,35 +30,7 @@ class RegisterBody extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const AppTextFormField(
-                  hintText: AppStrings.usernameHint,
-                  prefixIconSvgPath: AssetsPaths.profileSvgIcon,
-                ),
-                SizedBox(
-                  height: 1.6.sh,
-                ),
-                const AppTextFormField(
-                  hintText: AppStrings.emailHint,
-                  prefixIconSvgPath: AssetsPaths.messageSvgIcon,
-                ),
-                SizedBox(
-                  height: 1.6.sh,
-                ),
-                const AppTextFormField(
-                  hintText: AppStrings.passwordHint,
-                  prefixIconSvgPath: AssetsPaths.lockSvgIcon,
-                  isPasswordField: true,
-                  isObscureText: true,
-                ),
-                SizedBox(
-                  height: 1.6.sh,
-                ),
-                const AppTextFormField(
-                  hintText: AppStrings.confirmPassword,
-                  isObscureText: true,
-                  isPasswordField: true,
-                  prefixIconSvgPath: AssetsPaths.lockSvgIcon,
-                ),
+                const RegisterForm(),
                 SizedBox(
                   height: 3.sh,
                 ),
@@ -68,6 +41,11 @@ class RegisterBody extends StatelessWidget {
                     horizontal: 14.sw,
                     vertical: 1.6.sh,
                   ),
+                ),
+                SizedBox(height: 1.6.sh,),
+                ClickableText(
+                  text: AppStrings.alreadyHaveAnAccount,
+                  onTap: () => context.popRoute(),
                 ),
               ],
             ),

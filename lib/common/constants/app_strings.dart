@@ -22,4 +22,6 @@ class AppStrings {
   static const register = 'Create Account';
 
   static const confirmPassword = 'Confirm password';
+
+  static const alreadyHaveAnAccount = 'Already have an account?';
 }
