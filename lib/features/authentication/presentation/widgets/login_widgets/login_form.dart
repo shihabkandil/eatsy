@@ -13,6 +13,7 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+  // TODO add focus node implementation into cubit
   late final FocusNode _focusNode;
 
   @override

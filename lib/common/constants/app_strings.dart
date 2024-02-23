@@ -3,7 +3,7 @@ class AppStrings {
   static const registerScreenHeader = 'Sign Up For Free';
   static const emailHint = 'Email';
   static const passwordHint = 'Password';
-  static const usernameHint = 'Username';
+  static const usernameHint = 'Name';
   static const keepMeSigned = 'Keep Me Signed In';
   static const orContinueText = 'Or Continue With';
   static const forgotYourPassword = 'Forgot Your Password?';
@@ -19,5 +19,7 @@ class AppStrings {
   static const googleSignIn = 'Sign in with Google';
   static const appleSignIn = 'Sign in with Apple';
   static const login = 'Login';
-  static const register = 'Register';
+  static const register = 'Create Account';
+
+  static const confirmPassword = 'Confirm password';
 }
