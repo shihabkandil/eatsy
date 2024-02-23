@@ -3,7 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
-import '../custom_auth_text_form_field.dart';
+import '../../../../../common/widgets/app_text_form_field.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomAuthTextFormField(
+          AppTextFormField(
             onSubmitted: (_) => _focusNode.requestFocus(),
             hintText: AppStrings.emailHint,
             prefixIconSvgPath: AssetsPaths.messageSvgIcon,
@@ -35,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
           SizedBox(
             height: 2.sh,
           ),
-          CustomAuthTextFormField(
+          AppTextFormField(
             focusNode: _focusNode,
             hintText: AppStrings.passwordHint,
             isObscureText: true,
