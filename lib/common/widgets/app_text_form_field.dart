@@ -1,11 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../../../common/constants/app_colors.dart';
+import '../constants/app_colors.dart';
 
-class CustomAuthTextFormField extends StatelessWidget {
-  const CustomAuthTextFormField({
+class AppTextFormField extends StatefulWidget {
+  const AppTextFormField({
     Key? key,
     this.hintText,
     this.onChanged,
@@ -13,6 +14,7 @@ class CustomAuthTextFormField extends StatelessWidget {
     this.isObscureText = false,
     this.prefixIconSvgPath,
     this.focusNode,
+    this.isPasswordField = false,
   }) : super(key: key);
   final String? hintText;
   final void Function(String)? onChanged;
@@ -20,39 +22,64 @@ class CustomAuthTextFormField extends StatelessWidget {
   final bool isObscureText;
   final String? prefixIconSvgPath;
   final FocusNode? focusNode;
+  final bool isPasswordField;
+
+  @override
+  State<AppTextFormField> createState() => _AppTextFormFieldState();
+}
+
+class _AppTextFormFieldState extends State<AppTextFormField> {
+  bool isTextHidden = false;
+
+  @override
+  void initState() {
+    isTextHidden = widget.isObscureText;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
-      elevation: 1,
+      elevation: 0.25,
       shape: RoundedRectangleBorder(borderRadius: _getBorderRadius()),
       child: TextFormField(
-        focusNode: focusNode,
+        onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
+        focusNode: widget.focusNode,
         style: TextStyle(fontSize: 1.75.sh),
-        onChanged: onChanged,
-        onFieldSubmitted: onSubmitted,
+        onChanged: widget.onChanged,
+        onFieldSubmitted: widget.onSubmitted,
         maxLines: 1,
-        obscureText: isObscureText,
+        obscureText: isTextHidden,
         decoration: InputDecoration(
-          prefixIcon: prefixIconSvgPath != null
+          suffixIcon: widget.isPasswordField
+              ? InkWell(
+                  splashFactory: NoSplash.splashFactory,
+                  highlightColor: Colors.transparent,
+                  onTap: () => setState(() => isTextHidden = !isTextHidden),
+                  child: Icon(isTextHidden
+                      ? CupertinoIcons.eye_slash_fill
+                      : CupertinoIcons.eye_fill),
+                )
+              : null,
+          prefixIcon: widget.prefixIconSvgPath != null
               ? Padding(
                   padding: EdgeInsets.symmetric(horizontal: 2.8.sw),
                   child: SvgPicture.asset(
-                    prefixIconSvgPath!,
+                    widget.prefixIconSvgPath!,
                   ),
                 )
               : null,
           prefixIconConstraints:
               BoxConstraints.expand(width: 13.sw, height: 4.sh),
-          hintText: hintText,
+          hintText: widget.hintText,
           border: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
             borderSide: const BorderSide(color: Colors.transparent),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
-            borderSide: BorderSide(color: Colors.black12, width: 0.25.sw),
+            borderSide: BorderSide(color: Colors.black12, width: 0.15.sw),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),

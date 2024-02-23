@@ -1,4 +1,4 @@
-import 'package:eatsy/features/authentication/presentation/widgets/custom_auth_text_form_field.dart';
+import 'package:eatsy/common/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
-  group('Test CustomAuthTextFormField', () {
+  group('Test AppTextFormField', () {
     testWidgets('check properties', (widgetTester) async {
       const String sampleText = "Hint Sample";
       final FocusNode focusNode = FocusNode();
@@ -16,7 +16,7 @@ void main() {
         ResponsiveApp(builder: (context) {
           return MaterialApp(
             home: Scaffold(
-              body: CustomAuthTextFormField(
+              body: AppTextFormField(
                 hintText: sampleText,
                 focusNode: focusNode,
                 prefixIconSvgPath: assetPath,
@@ -45,7 +45,7 @@ void main() {
         ResponsiveApp(builder: (context) {
           return MaterialApp(
             home: Scaffold(
-              body: CustomAuthTextFormField(
+              body: AppTextFormField(
                 onChanged: (value) => changedText = value,
               ),
             ),
@@ -65,7 +65,7 @@ void main() {
         ResponsiveApp(builder: (context) {
           return MaterialApp(
             home: Scaffold(
-              body: CustomAuthTextFormField(
+              body: AppTextFormField(
                 onSubmitted: (value) => submittedText = value,
               ),
             ),

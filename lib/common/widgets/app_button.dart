@@ -3,21 +3,30 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../constants/app_colors.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({Key? key, required this.text, required this.onPressed})
+class AppButton extends StatelessWidget {
+  const AppButton(
+      {Key? key,
+      required this.text,
+      required this.onPressed,
+      this.height,
+      this.width,
+      this.padding})
       : super(key: key);
   final String text;
   final void Function() onPressed;
+  final double? height;
+  final double? width;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
           1.8.sh,
         ),
       ),
+      padding: EdgeInsets.zero,
       onPressed: onPressed,
       child: Ink(
         decoration: BoxDecoration(
@@ -26,7 +35,9 @@ class CustomButton extends StatelessWidget {
             ),
             gradient: AppColors.greenGradient),
         child: Container(
-          padding: EdgeInsets.symmetric(
+          height: height,
+          width: width,
+          padding: padding ?? EdgeInsets.symmetric(
             horizontal: 14.sw,
             vertical: 1.25.sh,
           ),

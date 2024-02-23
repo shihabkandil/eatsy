@@ -1,13 +1,17 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:eatsy/features/authentication/presentation/widgets/register_widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
-import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/widgets/app_button.dart';
+import '../../../../../common/widgets/clickable_text.dart';
 import '../auth_header.dart';
-import '../custom_auth_text_form_field.dart';
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({Key? key}) : super(key: key);
+
+  // TODO add focus node implementation into cubit
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +30,22 @@ class RegisterBody extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CustomAuthTextFormField(
-                  hintText: AppStrings.usernameHint,
-                  prefixIconSvgPath: AssetsPaths.profileSvgIcon,
-                ),
+                const RegisterForm(),
                 SizedBox(
-                  height: 2.sh,
+                  height: 3.sh,
                 ),
-                const CustomAuthTextFormField(
-                  hintText: AppStrings.passwordHint,
-                  isObscureText: true,
-                  prefixIconSvgPath: AssetsPaths.lockSvgIcon,
+                AppButton(
+                  text: AppStrings.register,
+                  onPressed: () {},
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 14.sw,
+                    vertical: 1.6.sh,
+                  ),
+                ),
+                SizedBox(height: 1.6.sh,),
+                ClickableText(
+                  text: AppStrings.alreadyHaveAnAccount,
+                  onTap: () => context.popRoute(),
                 ),
               ],
             ),

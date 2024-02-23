@@ -5,22 +5,8 @@ import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({Key? key}) : super(key: key);
-
-  @override
-  State<LoginForm> createState() => _LoginFormState();
-}
-
-class _LoginFormState extends State<LoginForm> {
-  // TODO add focus node implementation into cubit
-  late final FocusNode _focusNode;
-
-  @override
-  void initState() {
-    _focusNode = FocusNode();
-    super.initState();
-  }
+class RegisterForm extends StatelessWidget {
+  const RegisterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,23 +14,36 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AppTextFormField(
-            onSubmitted: (_) => _focusNode.requestFocus(),
+          const AppTextFormField(
+            hintText: AppStrings.usernameHint,
+            prefixIconSvgPath: AssetsPaths.profileSvgIcon,
+          ),
+          SizedBox(
+            height: 1.6.sh,
+          ),
+          const AppTextFormField(
             hintText: AppStrings.emailHint,
             prefixIconSvgPath: AssetsPaths.messageSvgIcon,
           ),
           SizedBox(
-            height: 2.sh,
+            height: 1.6.sh,
           ),
-          AppTextFormField(
-            focusNode: _focusNode,
+          const AppTextFormField(
             hintText: AppStrings.passwordHint,
+            prefixIconSvgPath: AssetsPaths.lockSvgIcon,
+            isPasswordField: true,
+            isObscureText: true,
+          ),
+          SizedBox(
+            height: 1.6.sh,
+          ),
+          const AppTextFormField(
+            hintText: AppStrings.confirmPassword,
             isObscureText: true,
             isPasswordField: true,
             prefixIconSvgPath: AssetsPaths.lockSvgIcon,
           ),
-        ],
-      ),
+      ],),
     );
   }
 }
