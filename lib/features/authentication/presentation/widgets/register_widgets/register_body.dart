@@ -3,7 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
-import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../common/widgets/app_button.dart';
 import '../auth_header.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
 
@@ -46,6 +46,8 @@ class RegisterBody extends StatelessWidget {
                 const AppTextFormField(
                   hintText: AppStrings.passwordHint,
                   prefixIconSvgPath: AssetsPaths.lockSvgIcon,
+                  isPasswordField: true,
+                  isObscureText: true,
                 ),
                 SizedBox(
                   height: 1.6.sh,
@@ -53,14 +55,19 @@ class RegisterBody extends StatelessWidget {
                 const AppTextFormField(
                   hintText: AppStrings.confirmPassword,
                   isObscureText: true,
+                  isPasswordField: true,
                   prefixIconSvgPath: AssetsPaths.lockSvgIcon,
                 ),
                 SizedBox(
                   height: 3.sh,
                 ),
-                CustomButton(
+                AppButton(
                   text: AppStrings.register,
                   onPressed: () {},
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 14.sw,
+                    vertical: 1.6.sh,
+                  ),
                 ),
               ],
             ),

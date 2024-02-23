@@ -6,7 +6,7 @@ import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/assets_paths.dart';
 import '../../../../../common/router/app_router.dart';
 import '../../../../../common/widgets/clickable_text.dart';
-import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../common/widgets/app_button.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -47,7 +47,7 @@ class LoginBody extends StatelessWidget {
                 SizedBox(
                   height: 2.2.sh,
                 ),
-                CustomButton(
+                AppButton(
                   text: AppStrings.login,
                   onPressed: () {},
                 ),

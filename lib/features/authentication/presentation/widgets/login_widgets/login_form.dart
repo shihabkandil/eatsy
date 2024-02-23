@@ -40,6 +40,7 @@ class _LoginFormState extends State<LoginForm> {
             focusNode: _focusNode,
             hintText: AppStrings.passwordHint,
             isObscureText: true,
+            isPasswordField: true,
             prefixIconSvgPath: AssetsPaths.lockSvgIcon,
           ),
         ],
