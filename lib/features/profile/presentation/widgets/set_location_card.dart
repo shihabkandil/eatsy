@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:eatsy/common/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -21,13 +23,10 @@ class SetLocationCard extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: () => context.pushRoute(const ProfileSuccessRoute()),
         child: const Text(
           'Set Location',
-          style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w500
-          ),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
         ),
       ),
     );
