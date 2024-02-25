@@ -5,6 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/gen/assets.gen.dart';
+import '../../../../common/router/app_router.dart';
 import '../../../../common/widgets/app_bar_header.dart';
 import '../widgets/vertical_svg_icon_card.dart';
 
@@ -32,7 +33,9 @@ class UpdateProfilePictureScreen extends StatelessWidget {
             width: double.maxFinite,
             svgPath: Assets.icons.gallery.path,
             text: "From Gallery",
-            onPressed: () {},
+            onPressed: () {
+              context.pushRoute(const SelectAddressRoute());
+            },
           ),
           SizedBox(
             height: 4.sh,
