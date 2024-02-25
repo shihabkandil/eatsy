@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../constants/gen/assets.gen.dart';
 
-class AuthScreenBase extends StatelessWidget {
-  const AuthScreenBase(
+class BackgroundPatternBaseScreen extends StatelessWidget {
+  const BackgroundPatternBaseScreen(
       {Key? key, required this.child, this.alignment = Alignment.center})
       : super(key: key);
   final Widget child;
