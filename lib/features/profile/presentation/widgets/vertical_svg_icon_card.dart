@@ -1,3 +1,4 @@
+import 'package:eatsy/common/constants/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -7,11 +8,11 @@ import '../../../../common/constants/app_colors.dart';
 class VerticalSvgIconCard extends StatelessWidget {
   const VerticalSvgIconCard(
       {super.key,
-        required this.svgPath,
-        required this.text,
-        required this.onPressed,
-        this.width,
-        this.height});
+      required this.svgPath,
+      required this.text,
+      required this.onPressed,
+      this.width,
+      this.height});
 
   final String svgPath;
   final String text;
@@ -27,14 +28,7 @@ class VerticalSvgIconCard extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-                color: AppColors.lightGreen.withOpacity(0.25),
-                blurRadius: 5,
-                offset: const Offset(0, 2),
-                spreadRadius: 0.5
-            )
-          ],
+          boxShadow: [UiConstants.cardBoxShadow],
           borderRadius: BorderRadius.circular(
             2.screenHeight,
           ),
