@@ -1,5 +1,5 @@
 import 'package:eatsy/common/constants/app_colors.dart';
-import 'package:eatsy/common/constants/assets_paths.dart';
+import 'package:eatsy/common/constants/gen/assets.gen.dart';
 import 'package:eatsy/features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:flutter/material.dart';
@@ -119,7 +119,7 @@ void main() {
       );
       expect(
         firstPageBodyWidget.imagePath,
-        equals(AssetsPaths.firstOnBoarding),
+        equals(Assets.images.illustrations.firstOnBoarding.path),
       );
 
       final secondPageBodyWidget = pageBodiesListWidget[1] as OnBoardingBody;
@@ -133,7 +133,7 @@ void main() {
       );
       expect(
         secondPageBodyWidget.imagePath,
-        equals(AssetsPaths.secondOnBoarding),
+        equals(Assets.images.illustrations.secondOnBoarding.path),
       );
     });
   });

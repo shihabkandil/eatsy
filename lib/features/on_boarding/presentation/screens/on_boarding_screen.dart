@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/app_strings.dart';
-import '../../../../common/constants/assets_paths.dart';
+import '../../../../common/constants/gen/assets.gen.dart';
 import '../../../../common/router/app_router.dart';
 import '../widgets/on_boarding_body.dart';
 
@@ -31,14 +31,14 @@ class OnBoardingScreen extends StatelessWidget {
       centerBackground: true,
       background: const [SizedBox(), SizedBox()],
       speed: 1.8,
-      pageBodies: const [
+      pageBodies: [
         OnBoardingBody(
           title: AppStrings.firstOnBoardingHeaderTitle,
           subTitle: AppStrings.firstOnBoardingHeaderSubTitle,
-          imagePath: AssetsPaths.firstOnBoarding,
+          imagePath: Assets.images.illustrations.firstOnBoarding.path,
         ),
         OnBoardingBody(
-          imagePath: AssetsPaths.secondOnBoarding,
+          imagePath: Assets.images.illustrations.secondOnBoarding.path,
           title: AppStrings.secondOnBoardingHeaderTitle,
           subTitle: AppStrings.secondOnBoardingHeaderSubTitle,
         ),

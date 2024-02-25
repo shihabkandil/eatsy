@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../common/constants/app_colors.dart';
-import '../../../../common/constants/assets_paths.dart';
+import '../constants/app_colors.dart';
+import '../constants/gen/assets.gen.dart';
 
-class AuthScreenBase extends StatelessWidget {
-  const AuthScreenBase(
+class BackgroundPatternBaseScreen extends StatelessWidget {
+  const BackgroundPatternBaseScreen(
       {Key? key, required this.child, this.alignment = Alignment.center})
       : super(key: key);
   final Widget child;
@@ -19,10 +19,10 @@ class AuthScreenBase extends StatelessWidget {
         children: [
           Container(
             constraints: const BoxConstraints.expand(),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  AssetsPaths.lightSplashPattern,
+                  Assets.images.lightSplashPattern.path,
                 ),
                 opacity: 0.6,
                 fit: BoxFit.cover,

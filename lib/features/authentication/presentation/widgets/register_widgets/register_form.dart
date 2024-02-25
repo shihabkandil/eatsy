@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
-import '../../../../../common/constants/assets_paths.dart';
+import '../../../../../common/constants/gen/assets.gen.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
 
 class RegisterForm extends StatelessWidget {
@@ -14,36 +14,37 @@ class RegisterForm extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const AppTextFormField(
+          AppTextFormField(
             hintText: AppStrings.usernameHint,
-            prefixIconSvgPath: AssetsPaths.profileSvgIcon,
+            prefixIconSvgPath: Assets.icons.profile.path,
           ),
           SizedBox(
             height: 1.6.sh,
           ),
-          const AppTextFormField(
+          AppTextFormField(
             hintText: AppStrings.emailHint,
-            prefixIconSvgPath: AssetsPaths.messageSvgIcon,
+            prefixIconSvgPath: Assets.icons.message.path,
           ),
           SizedBox(
             height: 1.6.sh,
           ),
-          const AppTextFormField(
+          AppTextFormField(
             hintText: AppStrings.passwordHint,
-            prefixIconSvgPath: AssetsPaths.lockSvgIcon,
+            prefixIconSvgPath: Assets.icons.lock.path,
             isPasswordField: true,
             isObscureText: true,
           ),
           SizedBox(
             height: 1.6.sh,
           ),
-          const AppTextFormField(
+          AppTextFormField(
             hintText: AppStrings.confirmPassword,
             isObscureText: true,
             isPasswordField: true,
-            prefixIconSvgPath: AssetsPaths.lockSvgIcon,
+            prefixIconSvgPath: Assets.icons.lock.path,
           ),
-      ],),
+        ],
+      ),
     );
   }
 }

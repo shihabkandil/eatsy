@@ -1,5 +1,5 @@
 import 'package:eatsy/common/constants/app_colors.dart';
-import 'package:eatsy/common/constants/assets_paths.dart';
+import 'package:eatsy/common/constants/gen/assets.gen.dart';
 import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,10 +9,10 @@ void main() {
   testWidgets('OnBoardingBody Widget', (widgetTester) async {
     const String title = 'Title Text';
     const String subTitle = 'subTitle Text';
-    const String imagePath = AssetsPaths.firstOnBoarding;
+    final String imagePath = Assets.images.illustrations.firstOnBoarding.path;
 
     await widgetTester.pumpWidget(ResponsiveApp(
-      builder: (_) => const MaterialApp(
+      builder: (_) => MaterialApp(
         home: OnBoardingBody(
           title: title,
           imagePath: imagePath,
@@ -32,7 +32,7 @@ void main() {
     final imageWidget = widgetTester.widget<Image>(imageFinder);
     expect(
       imageWidget.image,
-      const AssetImage(imagePath),
+      AssetImage(imagePath),
     );
 
     final titleWidget = widgetTester.widget<Text>(titleFinder);

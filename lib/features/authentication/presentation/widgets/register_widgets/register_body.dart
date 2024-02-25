@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:eatsy/common/router/app_router.dart';
 import 'package:eatsy/features/authentication/presentation/widgets/register_widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -36,13 +37,16 @@ class RegisterBody extends StatelessWidget {
                 ),
                 AppButton(
                   text: AppStrings.register,
-                  onPressed: () {},
+                  onPressed: () =>
+                      context.navigateTo(const UpdateProfilePictureRoute()),
                   padding: EdgeInsets.symmetric(
                     horizontal: 14.sw,
                     vertical: 1.6.sh,
                   ),
                 ),
-                SizedBox(height: 1.6.sh,),
+                SizedBox(
+                  height: 1.6.sh,
+                ),
                 ClickableText(
                   text: AppStrings.alreadyHaveAnAccount,
                   onTap: () => context.popRoute(),
