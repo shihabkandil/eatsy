@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
-import '../../../../../common/constants/assets_paths.dart';
 import '../../../../../common/router/app_router.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../../../../../common/widgets/app_button.dart';
+import '../../../../../gen/assets.gen.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -72,7 +72,7 @@ class LoginBody extends StatelessWidget {
                     //TODO GoogleSignIn
                   },
                   text: AppStrings.googleSignIn,
-                  assetPath: AssetsPaths.googleSvgIcon,
+                  assetPath: Assets.icons.apple,
                 ),
                 SizedBox(
                   height: 4.sw,
@@ -82,7 +82,7 @@ class LoginBody extends StatelessWidget {
                     ///TODO Facebook SignIn
                   },
                   text: AppStrings.appleSignIn,
-                  assetPath: AssetsPaths.appleSvgIcon,
+                  assetPath: Assets.icons.apple,
                   background: Colors.black,
                   textColor: Colors.white,
                 ),

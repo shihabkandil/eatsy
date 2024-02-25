@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/constants/app_colors.dart';
-import '../../../../common/constants/assets_paths.dart';
+import '../../../../gen/assets.gen.dart';
 
 class AuthScreenBase extends StatelessWidget {
   const AuthScreenBase(
@@ -19,10 +19,10 @@ class AuthScreenBase extends StatelessWidget {
         children: [
           Container(
             constraints: const BoxConstraints.expand(),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  AssetsPaths.lightSplashPattern,
+                  Assets.images.lightSplashPattern.path,
                 ),
                 opacity: 0.6,
                 fit: BoxFit.cover,

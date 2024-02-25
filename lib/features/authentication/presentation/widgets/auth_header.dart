@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../../../common/constants/assets_paths.dart';
+import '../../../../gen/assets.gen.dart';
+
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({Key? key, required this.text}) : super(key: key);
@@ -15,9 +16,7 @@ class AuthHeader extends StatelessWidget {
           height: 28.screenHeight,
           child: Transform.scale(
             scale: 1.6,
-            child: Image.asset(
-              AssetsPaths.logo,
-            ),
+            child: Assets.images.logo.logoGreen.image()
           ),
         ),
         Text(
