@@ -1,7 +1,7 @@
 import 'package:eatsy/common/constants/app_colors.dart';
+import 'package:eatsy/common/constants/gen/assets.gen.dart';
 import 'package:eatsy/features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
-import 'package:eatsy/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_test/flutter_test.dart';

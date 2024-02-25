@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
+import '../../../../../common/constants/gen/assets.gen.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
-import '../../../../../gen/assets.gen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class _LoginFormState extends State<LoginForm> {
           AppTextFormField(
             onSubmitted: (_) => _focusNode.requestFocus(),
             hintText: AppStrings.emailHint,
-            prefixIconSvgPath: Assets.icons.message,
+            prefixIconSvgPath: Assets.icons.message.path,
           ),
           SizedBox(
             height: 2.sh,
@@ -41,7 +41,7 @@ class _LoginFormState extends State<LoginForm> {
             hintText: AppStrings.passwordHint,
             isObscureText: true,
             isPasswordField: true,
-            prefixIconSvgPath: Assets.icons.lock,
+            prefixIconSvgPath: Assets.icons.lock.path,
           ),
         ],
       ),

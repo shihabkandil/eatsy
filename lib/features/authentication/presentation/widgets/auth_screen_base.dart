@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/constants/app_colors.dart';
-import '../../../../gen/assets.gen.dart';
+import '../../../../common/constants/gen/assets.gen.dart';
 
 class AuthScreenBase extends StatelessWidget {
   const AuthScreenBase(

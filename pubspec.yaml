@@ -55,7 +55,12 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_gen:
+  output: lib/common/constants/gen
+  # Optional
+  integrations:
+    flutter_svg: true
+    lottie: true
 # The following section is specific to Flutter packages.
 flutter:
 

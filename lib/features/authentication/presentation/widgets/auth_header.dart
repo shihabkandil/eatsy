@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../../../gen/assets.gen.dart';
+import '../../../../common/constants/gen/assets.gen.dart';
 
 
 class AuthHeader extends StatelessWidget {

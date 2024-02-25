@@ -1,6 +1,6 @@
 import 'package:eatsy/common/constants/app_colors.dart';
+import 'package:eatsy/common/constants/gen/assets.gen.dart';
 import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
-import 'package:eatsy/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:responsive_builder/responsive_builder.dart';
