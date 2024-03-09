@@ -36,6 +36,7 @@ dependencies:
   flutter_onboarding_slider: ^1.0.9
   responsive_builder: ^0.7.0
   cupertino_icons: ^1.0.6
+  easy_localization: ^3.0.5
 
 
 dev_dependencies:

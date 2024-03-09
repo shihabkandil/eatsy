@@ -72,7 +72,7 @@ class LoginBody extends StatelessWidget {
                     //TODO GoogleSignIn
                   },
                   text: AppStrings.googleSignIn,
-                  assetPath: Assets.icons.apple.path,
+                  assetPath: Assets.icons.google.path,
                 ),
                 SizedBox(
                   height: 4.sw,
