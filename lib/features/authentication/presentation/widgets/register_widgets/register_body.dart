@@ -49,7 +49,7 @@ class RegisterBody extends StatelessWidget {
                 ),
                 ClickableText(
                   text: AppStrings.alreadyHaveAnAccount,
-                  onTap: () => context.popRoute(),
+                  onTap: () => context.maybePop(),
                 ),
               ],
             ),

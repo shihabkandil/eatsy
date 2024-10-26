@@ -13,7 +13,7 @@ class AppBackButton extends StatelessWidget {
       width: 5.screenHeight,
       height: 5.screenHeight,
       child: InkWell(
-        onTap: () => context.popRoute(),
+        onTap: () => context.maybePop(),
         borderRadius: BorderRadius.circular(
           1.6.screenHeight,
         ),

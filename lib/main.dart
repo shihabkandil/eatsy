@@ -7,11 +7,10 @@ import 'common/router/app_router.dart';
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
   ///TODO Add Firebase init
   FlutterNativeSplash.remove();
   runApp(
-    App(
-      appRouter: AppRouter(),
-    ),
+    App(appRouter: AppRouter()),
   );
 }

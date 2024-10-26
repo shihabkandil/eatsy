@@ -12,7 +12,8 @@ class App extends StatelessWidget {
     return ResponsiveApp(
       builder: (context) => MaterialApp.router(
         debugShowCheckedModeBanner: true,
-        routerConfig: appRouter.config(),
+        routerDelegate: appRouter.delegate(),
+        routeInformationParser: appRouter.defaultRouteParser(),
         theme: ThemeData(fontFamily: 'Poppins'),
       ),
     );
