@@ -1,7 +1,6 @@
 import 'package:eatsy/common/widgets/gradient_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   group('GradientText widget', () {
@@ -13,16 +12,14 @@ void main() {
     late Widget foodTestApp;
 
     setUp(() {
-      foodTestApp = ResponsiveApp(
-        builder: (_) => MaterialApp(
+      foodTestApp =  MaterialApp(
           home: Scaffold(
             body: GradientText(
               text: sampleText,
               gradient: gradient,
-              style: TextStyle(fontSize: 1.sh),
+              style: const TextStyle(fontSize: 14),
             ),
           ),
-        ),
       );
     });
 
@@ -31,7 +28,7 @@ void main() {
       final textFinder = find.text(sampleText);
       expect(textFinder, findsOneWidget);
       final textWidget = widgetTester.widget<Text>(textFinder);
-      expect(textWidget.style, TextStyle(fontSize: 1.sh));
+      expect(textWidget.style, const TextStyle(fontSize: 12));
     });
 
     testWidgets('Applies shaderMask', (widgetTester) async {

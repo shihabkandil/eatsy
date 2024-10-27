@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/gen/assets.gen.dart';
@@ -25,18 +24,14 @@ class LoginBody extends StatelessWidget {
           const AuthHeader(
             text: AppStrings.loginScreenHeader,
           ),
-          SizedBox(
-            height: 4.sh,
-          ),
+          const SizedBox(height: 16),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 6.sw),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const LoginForm(),
-                SizedBox(
-                  height: 1.sh,
-                ),
+                const SizedBox(height: 4),
                 ClickableText(
                   alignment: Alignment.centerRight,
                   text: AppStrings.forgotYourPassword,
@@ -44,29 +39,23 @@ class LoginBody extends StatelessWidget {
                     ///TODO Route to ForgotPasswordRoute
                   },
                 ),
-                SizedBox(
-                  height: 2.2.sh,
-                ),
+                const SizedBox(height: 14),
                 AppButton(
                   text: AppStrings.login,
                   onPressed: () {},
                 ),
-                SizedBox(
-                  height: 2.sh,
-                ),
-                Align(
+                const SizedBox(height: 14),
+                const Align(
                   alignment: Alignment.center,
                   child: Text(
                     AppStrings.orContinueText,
                     style: TextStyle(
-                      fontSize: 1.6.sh,
+                      fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 2.sh,
-                ),
+                const SizedBox(height: 14),
                 SocialAuthButton(
                   onPressed: () {
                     //TODO GoogleSignIn
@@ -74,9 +63,7 @@ class LoginBody extends StatelessWidget {
                   text: AppStrings.googleSignIn,
                   assetPath: Assets.icons.google.path,
                 ),
-                SizedBox(
-                  height: 4.sw,
-                ),
+                const SizedBox(height: 14),
                 SocialAuthButton(
                   onPressed: () {
                     ///TODO Facebook SignIn
@@ -86,9 +73,7 @@ class LoginBody extends StatelessWidget {
                   background: Colors.black,
                   textColor: Colors.white,
                 ),
-                SizedBox(
-                  height: 2.sh,
-                ),
+                const SizedBox(height: 14),
                 ClickableText(
                   text: AppStrings.dontHaveAnAccount,
                   onTap: () => context.pushRoute(const RegisterRoute()),

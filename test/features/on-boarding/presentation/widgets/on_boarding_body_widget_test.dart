@@ -3,7 +3,6 @@ import 'package:eatsy/common/constants/gen/assets.gen.dart';
 import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   testWidgets('OnBoardingBody Widget', (widgetTester) async {
@@ -11,15 +10,15 @@ void main() {
     const String subTitle = 'subTitle Text';
     final String imagePath = Assets.images.illustrations.firstOnBoarding.path;
 
-    await widgetTester.pumpWidget(ResponsiveApp(
-      builder: (_) => MaterialApp(
+    await widgetTester.pumpWidget(
+      MaterialApp(
         home: OnBoardingBody(
           title: title,
           imagePath: imagePath,
           subTitle: subTitle,
         ),
       ),
-    ));
+    );
 
     final imageFinder = find.byType(Image);
     final titleFinder = find.text(title);
@@ -36,11 +35,11 @@ void main() {
     );
 
     final titleWidget = widgetTester.widget<Text>(titleFinder);
-    expect(titleWidget.style?.fontSize, 3.sh);
+    expect(titleWidget.style?.fontSize, 16);
     expect(titleWidget.style?.color, AppColors.lightGreen);
 
     final subTitleWidget = widgetTester.widget<Text>(subTitleFinder);
-    expect(subTitleWidget.style?.fontSize, 2.5.sh);
+    expect(subTitleWidget.style?.fontSize, 20);
     expect(subTitleWidget.style?.color, Colors.black38);
   });
 }

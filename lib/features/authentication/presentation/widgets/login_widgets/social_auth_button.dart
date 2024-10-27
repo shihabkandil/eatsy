@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_colors.dart';
 
@@ -21,40 +20,39 @@ class SocialAuthButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80.screenWidth,
-      child: MaterialButton(
-        color: background,
-        height: 6.sh,
-        elevation: 0,
-        focusElevation: 0,
-        highlightElevation: 0,
-        splashColor: AppColors.lightGreen.withOpacity(0.25),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            2.sh,
-          ),
-          side: BorderSide(
-            color: Colors.black.withOpacity(0.1),
-            width: 0.25.sw,
-          ),
-        ),
-        onPressed: onPressed,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(assetPath, width: 3.sh),
-            SizedBox(
-              width: 3.sw,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: SizedBox(
+        width: double.maxFinite,
+        child: MaterialButton(
+          color: background,
+          height: 50,
+          elevation: 0,
+          focusElevation: 0,
+          highlightElevation: 0,
+          splashColor: AppColors.lightGreen.withOpacity(0.25),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: BorderSide(
+              color: Colors.black.withOpacity(0.1),
+              width: 1,
             ),
-            Text(
-              text,
-              style: TextStyle(
-                  color: textColor,
-                  fontSize: 1.8.sh,
-                  fontWeight: FontWeight.w400),
-            ),
-          ],
+          ),
+          onPressed: onPressed,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(assetPath, width: 20),
+              const SizedBox(width: 20),
+              Text(
+                text,
+                style: TextStyle(
+                    color: textColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400),
+              ),
+            ],
+          ),
         ),
       ),
     );

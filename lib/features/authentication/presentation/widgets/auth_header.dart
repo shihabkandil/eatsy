@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/gen/assets.gen.dart';
 
@@ -13,7 +12,7 @@ class AuthHeader extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 28.screenHeight,
+          height: MediaQuery.sizeOf(context).height * 0.28,
           child: Transform.scale(
             scale: 1.6,
             child: Assets.images.logo.logoGreen.image()
@@ -21,8 +20,8 @@ class AuthHeader extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(
-            fontSize: 3.sh,
+          style: const TextStyle(
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
         ),

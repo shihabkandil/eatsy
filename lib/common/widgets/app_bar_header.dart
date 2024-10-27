@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import 'app_back_button.dart';
 
@@ -14,10 +13,10 @@ class AppBarHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      actions: <Widget>[
-        SizedBox(width: 4.screenWidth),
-        const AppBackButton(),
-        const Spacer(),
+      actions: const <Widget>[
+        SizedBox(width: 16),
+        AppBackButton(),
+        Spacer(),
       ],
       leading: const SizedBox.shrink(),
       bottom: AppBar(

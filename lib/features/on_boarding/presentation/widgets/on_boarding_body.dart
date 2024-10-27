@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 
@@ -27,31 +26,29 @@ class OnBoardingBody extends StatelessWidget {
             imagePath,
           ),
         ),
-        SizedBox(height: 5.sh),
+        const SizedBox(height: 25),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.sw),
+          padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Text(
             title,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: AppColors.lightGreen,
-              fontSize: 3.sh,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
           ),
         ),
-        SizedBox(
-          height: 2.sh,
-        ),
+        const SizedBox(height: 12),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 3.sw),
+            padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Text(
               subTitle,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black38,
-                fontSize: 2.5.sh,
+                fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
             ),

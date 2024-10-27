@@ -2,7 +2,6 @@ import 'package:eatsy/common/router/app_router.dart';
 import 'package:eatsy/features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   late AppRouter router;
@@ -12,10 +11,8 @@ void main() {
   });
 
   Widget app() {
-    return ResponsiveApp(
-      builder: (_) => MaterialApp.router(
-        routerConfig: router.config(),
-      ),
+    return MaterialApp.router(
+      routerConfig: router.config(),
     );
   }
 

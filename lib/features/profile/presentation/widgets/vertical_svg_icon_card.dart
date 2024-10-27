@@ -1,7 +1,6 @@
 import 'package:eatsy/common/constants/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 
@@ -29,18 +28,14 @@ class VerticalSvgIconCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [UiConstants.cardBoxShadow],
-          borderRadius: BorderRadius.circular(
-            2.screenHeight,
-          ),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: InkWell(
           onTap: onPressed,
           splashColor: AppColors.lightGreen.withOpacity(0.15),
-          borderRadius: BorderRadius.circular(
-            2.screenHeight,
-          ),
+          borderRadius: BorderRadius.circular(12),
           child: Padding(
-            padding: EdgeInsets.all(8.screenWidth),
+            padding: const EdgeInsets.all(16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -1,7 +1,6 @@
 import 'package:eatsy/common/widgets/clickable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   const String sampleText = 'SampleText';
@@ -10,8 +9,7 @@ void main() {
   late Widget foodTestApp;
 
   setUp(() {
-    foodTestApp = ResponsiveApp(
-      builder: (_) => MaterialApp(
+    foodTestApp =  MaterialApp(
         home: Scaffold(
           body: ClickableText(
             text: sampleText,
@@ -20,7 +18,6 @@ void main() {
             textStyle: const TextStyle(fontSize: 20),
           ),
         ),
-      ),
     );
   });
 

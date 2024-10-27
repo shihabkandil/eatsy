@@ -3,7 +3,6 @@ import 'package:eatsy/features/authentication/presentation/widgets/login_widgets
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   group("test social auth button", () {
@@ -11,21 +10,17 @@ void main() {
       // Arrange
       const String text = 'example';
 
-      await widgetTester.pumpWidget(
-        ResponsiveApp(builder: (context) {
-          return MaterialApp(
-            home: Scaffold(
-              body: SocialAuthButton(
-                text: text,
-                assetPath: Assets.icons.gallery.path,
-                onPressed: () {},
-                textColor: Colors.red,
-                background: Colors.black,
-              ),
-            ),
-          );
-        }),
-      );
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: SocialAuthButton(
+            text: text,
+            assetPath: Assets.icons.gallery.path,
+            onPressed: () {},
+            textColor: Colors.red,
+            background: Colors.black,
+          ),
+        ),
+      ));
 
       // Assert
 
@@ -51,19 +46,15 @@ void main() {
       bool isPressTriggered = false;
       const buttonText = 'example';
 
-      await widgetTester.pumpWidget(
-        ResponsiveApp(builder: (context) {
-          return MaterialApp(
-            home: Scaffold(
-              body: SocialAuthButton(
-                text: buttonText,
-                assetPath: Assets.icons.gallery.path,
-                onPressed: () => isPressTriggered = !isPressTriggered,
-              ),
-            ),
-          );
-        }),
-      );
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: SocialAuthButton(
+            text: buttonText,
+            assetPath: Assets.icons.gallery.path,
+            onPressed: () => isPressTriggered = !isPressTriggered,
+          ),
+        ),
+      ));
 
       expect(isPressTriggered, false);
 
