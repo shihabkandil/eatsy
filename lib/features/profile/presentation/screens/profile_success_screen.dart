@@ -1,10 +1,9 @@
 import 'package:auto_route/annotations.dart';
-import 'package:eatsy/common/constants/app_colors.dart';
-import 'package:eatsy/common/widgets/app_button.dart';
-import 'package:eatsy/common/widgets/background_pattern_base_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../../../common/constants/app_colors.dart';
+import '../../../../common/widgets/app_button.dart';
+import '../../../../common/widgets/background_pattern_base_screen.dart';
 import '../../../../common/constants/gen/assets.gen.dart';
 
 @RoutePage()
@@ -19,22 +18,15 @@ class ProfileSuccessScreen extends StatelessWidget {
       children: [
         const Spacer(flex: 15),
         Assets.icons.successIllustration.svg(),
-        SizedBox(
-          height: 2.6.screenHeight,
-        ),
-        Text(
+        SizedBox(height: 12),
+        const Text(
           'CONGRATS !',
-          style: TextStyle(
-            color: AppColors.lightGreen,
-            fontSize: 2.8.screenHeight,
-          ),
+          style: TextStyle(color: AppColors.lightGreen, fontSize: 16),
         ),
-        SizedBox(
-          height: 2.screenHeight,
-        ),
+        const SizedBox(height: 12),
         Text(
           'YOUR PROFILE IS READY TO USE',
-          style: TextStyle(color: Colors.black, fontSize: 2.2.screenHeight),
+          style: TextStyle(color: Colors.black, fontSize: 18),
         ),
         const Spacer(flex: 16),
         AppButton(text: "Continue", onPressed: () {}),

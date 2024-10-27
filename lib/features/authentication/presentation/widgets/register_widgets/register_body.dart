@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:eatsy/common/router/app_router.dart';
-import 'package:eatsy/features/authentication/presentation/widgets/register_widgets/register_form.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../../../../common/router/app_router.dart';
+import 'register_form.dart';
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/widgets/app_button.dart';
 import '../../../../../common/widgets/clickable_text.dart';
@@ -23,29 +22,25 @@ class RegisterBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const AuthHeader(text: AppStrings.registerScreenHeader),
-          SizedBox(
-            height: 4.sh,
-          ),
+          const SizedBox(height: 14),
           Padding(
-            padding: EdgeInsets.all(10.sw),
+            padding: const EdgeInsets.all(14),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const RegisterForm(),
-                SizedBox(
-                  height: 3.sh,
-                ),
+                const SizedBox(height: 20),
                 AppButton(
                   text: AppStrings.register,
                   onPressed: () =>
                       context.navigateTo(const UpdateProfilePictureRoute()),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 14.sw,
-                    vertical: 1.6.sh,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
                   ),
                 ),
-                SizedBox(
-                  height: 1.6.sh,
+                const SizedBox(
+                  height: 16,
                 ),
                 ClickableText(
                   text: AppStrings.alreadyHaveAnAccount,

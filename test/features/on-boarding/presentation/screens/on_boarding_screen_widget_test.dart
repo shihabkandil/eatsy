@@ -5,15 +5,12 @@ import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   group('OnBoarding Screen', () {
     Widget onBoardingScreenWidget() {
-      return ResponsiveApp(
-        builder: (_) => const MaterialApp(
-          home: OnBoardingScreen(),
-        ),
+      return const MaterialApp(
+        home: OnBoardingScreen(),
       );
     }
 
@@ -57,7 +54,7 @@ void main() {
       expect(
         shape.borderRadius,
         equals(
-          BorderRadius.circular(1.sh),
+          BorderRadius.circular(12),
         ),
       );
       expect(onBoardingSliderWidget.totalPage, equals(2));

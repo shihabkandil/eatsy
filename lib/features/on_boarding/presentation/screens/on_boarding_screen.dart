@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/app_strings.dart';
@@ -21,7 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(1.sh),
+          borderRadius: BorderRadius.circular(8),
         ),
       ),
       controllerColor: AppColors.lightGreen,

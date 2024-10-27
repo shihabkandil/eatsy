@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../constants/app_colors.dart';
 import 'gradient_text.dart';
@@ -28,8 +27,8 @@ class ClickableText extends StatelessWidget {
         child: GradientText(
           text: text,
           style: textStyle ??
-               TextStyle(
-                fontSize: 1.6.sh,
+               const TextStyle(
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: AppColors.lightGreen,
                 decoration: TextDecoration.underline,

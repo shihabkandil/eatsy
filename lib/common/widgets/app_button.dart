@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../constants/app_colors.dart';
 
@@ -22,35 +21,30 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          1.8.sh,
-        ),
+        borderRadius: BorderRadius.circular(16),
       ),
       padding: EdgeInsets.zero,
       onPressed: onPressed,
       child: Ink(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(
-              1.8.sh,
-            ),
+            borderRadius: BorderRadius.circular(16),
             gradient: AppColors.greenGradient),
         child: Container(
           height: height,
           width: width,
-          padding: padding ?? EdgeInsets.symmetric(
-            horizontal: 14.sw,
-            vertical: 1.25.sh,
-          ),
+          padding: padding ??
+              const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 8,
+              ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(
-              1.8.sh,
-            ),
+            borderRadius: BorderRadius.circular(16),
           ),
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
-              fontSize: 2.sh,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
           ),

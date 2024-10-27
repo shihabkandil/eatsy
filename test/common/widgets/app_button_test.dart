@@ -1,7 +1,6 @@
 import 'package:eatsy/common/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   const String sampleText = 'SampleText';
@@ -10,16 +9,14 @@ void main() {
   late Widget foodTestApp;
 
   setUp(() {
-    foodTestApp = ResponsiveApp(
-      builder: (_) => MaterialApp(
-        home: Scaffold(
-            body: AppButton(
-          onPressed: () {
-            pressTriggered = true;
-          },
-          text: sampleText,
-        )),
-      ),
+    foodTestApp = MaterialApp(
+      home: Scaffold(
+          body: AppButton(
+        onPressed: () {
+          pressTriggered = true;
+        },
+        text: sampleText,
+      )),
     );
   });
 

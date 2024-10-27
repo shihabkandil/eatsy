@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/gen/assets.gen.dart';
@@ -33,9 +32,7 @@ class _LoginFormState extends State<LoginForm> {
             hintText: AppStrings.emailHint,
             prefixIconSvgPath: Assets.icons.message.path,
           ),
-          SizedBox(
-            height: 2.sh,
-          ),
+          const SizedBox(height: 14),
           AppTextFormField(
             focusNode: _focusNode,
             hintText: AppStrings.passwordHint,

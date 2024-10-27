@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   group('Test AppTextFormField', () {
@@ -12,20 +11,16 @@ void main() {
       final FocusNode focusNode = FocusNode();
       const String assetPath = 'assets/icons/profile.svg';
       const bool isObscureText = true;
-      await widgetTester.pumpWidget(
-        ResponsiveApp(builder: (context) {
-          return MaterialApp(
-            home: Scaffold(
-              body: AppTextFormField(
-                hintText: sampleText,
-                focusNode: focusNode,
-                prefixIconSvgPath: assetPath,
-                isObscureText: isObscureText,
-              ),
-            ),
-          );
-        }),
-      );
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: AppTextFormField(
+            hintText: sampleText,
+            focusNode: focusNode,
+            prefixIconSvgPath: assetPath,
+            isObscureText: isObscureText,
+          ),
+        ),
+      ));
       expect(find.text(sampleText), findsOneWidget);
       final svgIconFinder = find.byType(SvgPicture);
       expect(svgIconFinder, findsOneWidget);
@@ -41,17 +36,13 @@ void main() {
     testWidgets('OnChangedCallback', (widgetTester) async {
       String changedText = '';
 
-      await widgetTester.pumpWidget(
-        ResponsiveApp(builder: (context) {
-          return MaterialApp(
-            home: Scaffold(
-              body: AppTextFormField(
-                onChanged: (value) => changedText = value,
-              ),
-            ),
-          );
-        }),
-      );
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: AppTextFormField(
+            onChanged: (value) => changedText = value,
+          ),
+        ),
+      ));
 
       await widgetTester.enterText(find.byType(TextFormField), 'Hello World');
 
@@ -61,17 +52,13 @@ void main() {
     testWidgets('OnSubmittedCallback', (widgetTester) async {
       String submittedText = '';
 
-      await widgetTester.pumpWidget(
-        ResponsiveApp(builder: (context) {
-          return MaterialApp(
-            home: Scaffold(
-              body: AppTextFormField(
-                onSubmitted: (value) => submittedText = value,
-              ),
-            ),
-          );
-        }),
-      );
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: AppTextFormField(
+            onSubmitted: (value) => submittedText = value,
+          ),
+        ),
+      ));
       await widgetTester.enterText(
           find.byType(TextFormField), 'Submitted Text Sample');
       await widgetTester.testTextInput.receiveAction(TextInputAction.done);

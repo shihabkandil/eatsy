@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../constants/app_colors.dart';
 
@@ -46,7 +45,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
       child: TextFormField(
         onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
         focusNode: widget.focusNode,
-        style: TextStyle(fontSize: 1.75.sh),
+        style: const TextStyle(fontSize: 16),
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onSubmitted,
         maxLines: 1,
@@ -64,14 +63,14 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
               : null,
           prefixIcon: widget.prefixIconSvgPath != null
               ? Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2.8.sw),
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
                   child: SvgPicture.asset(
                     widget.prefixIconSvgPath!,
                   ),
                 )
               : null,
           prefixIconConstraints:
-              BoxConstraints.expand(width: 13.sw, height: 4.sh),
+              const BoxConstraints.expand(width: 20, height: 16),
           hintText: widget.hintText,
           border: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
@@ -79,17 +78,17 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
-            borderSide: BorderSide(color: Colors.black12, width: 0.15.sw),
+            borderSide: const BorderSide(color: Colors.black12),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: _getBorderRadius(),
-            borderSide: BorderSide(color: AppColors.lightGreen, width: 0.25.sw),
+            borderSide: const BorderSide(color: AppColors.lightGreen),
           ),
           filled: true,
           fillColor: Colors.white,
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: 5.sw,
-            vertical: 2.sh,
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 14,
           ),
         ),
       ),
@@ -97,6 +96,6 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   }
 
   BorderRadius _getBorderRadius() {
-    return BorderRadius.circular(2.sh);
+    return BorderRadius.circular(16);
   }
 }

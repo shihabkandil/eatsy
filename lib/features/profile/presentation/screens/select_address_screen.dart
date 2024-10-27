@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/gen/assets.gen.dart';
@@ -20,37 +19,31 @@ class SelectAddressScreen extends StatelessWidget {
         title: 'Upload your photo profile',
       ),
       body: Padding(
-        padding: EdgeInsets.all(4.screenWidth) +
-            EdgeInsets.symmetric(horizontal: 2.screenWidth),
+        padding: const EdgeInsets.all(14) +
+            const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
           children: [
             const Text(
                 "This data will be used when delivering food to your doorstep."),
-            SizedBox(
-              height: 5.sh,
-            ),
+            const SizedBox(height: 16),
             DecoratedBox(
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [UiConstants.cardBoxShadow.scale(0.8)],
-                borderRadius: BorderRadius.circular(
-                  2.screenHeight,
-                ),
+                borderRadius: BorderRadius.circular(12),
               ),
               child: Padding(
-                padding: EdgeInsets.all(3.screenWidth),
+                padding: const EdgeInsets.all(14),
                 child: Column(
                   children: [
                     Row(
                       children: [
                         Assets.icons.location.svg(),
-                        SizedBox(
-                          width: 2.screenWidth,
-                        ),
+                        const SizedBox(width: 12),
                         const Text('Your Location')
                       ],
                     ),
-                    SizedBox(height: 1.screenHeight),
+                    const SizedBox(height: 6),
                     const SetLocationCard()
                   ],
                 ),

@@ -1,7 +1,5 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../common/constants/app_colors.dart';
 import '../../../../common/constants/gen/assets.gen.dart';
@@ -21,14 +19,12 @@ class UpdateProfilePictureScreen extends StatelessWidget {
         title: 'Upload your photo profile',
       ),
       body: Padding(
-        padding: EdgeInsets.all(4.screenWidth) +
-            EdgeInsets.symmetric(horizontal: 2.screenWidth),
+        padding: const EdgeInsets.all(14) +
+            const EdgeInsets.symmetric(horizontal: 12),
         child: Column(children: [
           const Text(
               "This data will be displayed in your account profile for security."),
-          SizedBox(
-            height: 10.sh,
-          ),
+          const SizedBox(height: 20),
           VerticalSvgIconCard(
             width: double.maxFinite,
             svgPath: Assets.icons.gallery.path,
@@ -37,9 +33,7 @@ class UpdateProfilePictureScreen extends StatelessWidget {
               context.pushRoute(const SelectAddressRoute());
             },
           ),
-          SizedBox(
-            height: 4.sh,
-          ),
+          const SizedBox(height: 20),
           VerticalSvgIconCard(
             width: double.maxFinite,
             svgPath: Assets.icons.camera.path,
@@ -51,5 +45,3 @@ class UpdateProfilePictureScreen extends StatelessWidget {
     );
   }
 }
-
-
