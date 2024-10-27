@@ -49,7 +49,7 @@ class LoginBody extends StatelessWidget {
                 ),
                 AppButton(
                   text: AppStrings.login,
-                  onPressed: () {},
+                  onPressed: () => context.pushRoute(const HomeRoute()),
                 ),
                 SizedBox(
                   height: 2.sh,
