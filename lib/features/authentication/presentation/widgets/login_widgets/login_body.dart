@@ -42,7 +42,7 @@ class LoginBody extends StatelessWidget {
                 const SizedBox(height: 14),
                 AppButton(
                   text: AppStrings.login,
-                  onPressed: () {},
+                  onPressed: () => context.pushRoute(const HomeRoute()),
                 ),
                 const SizedBox(height: 14),
                 const Align(
