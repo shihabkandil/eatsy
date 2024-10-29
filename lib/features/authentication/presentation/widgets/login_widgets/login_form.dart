@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/constants/app_strings.dart';
+import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../../common/constants/gen/assets.gen.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
 
@@ -29,13 +29,13 @@ class _LoginFormState extends State<LoginForm> {
         children: [
           AppTextFormField(
             onSubmitted: (_) => _focusNode.requestFocus(),
-            hintText: AppStrings.emailHint,
+            hintText: context.localizer.emailHint,
             prefixIconSvgPath: Assets.icons.message.path,
           ),
           const SizedBox(height: 14),
           AppTextFormField(
             focusNode: _focusNode,
-            hintText: AppStrings.passwordHint,
+            hintText: context.localizer.passwordHint,
             isObscureText: true,
             isPasswordField: true,
             prefixIconSvgPath: Assets.icons.lock.path,

@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../../common/router/app_router.dart';
 import 'register_form.dart';
-import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/widgets/app_button.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../auth_header.dart';
@@ -21,7 +21,7 @@ class RegisterBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const AuthHeader(text: AppStrings.registerScreenHeader),
+          AuthHeader(text: context.localizer.registerScreenHeader),
           const SizedBox(height: 14),
           Padding(
             padding: const EdgeInsets.all(14),
@@ -31,7 +31,7 @@ class RegisterBody extends StatelessWidget {
                 const RegisterForm(),
                 const SizedBox(height: 20),
                 AppButton(
-                  text: AppStrings.register,
+                  text: context.localizer.register,
                   onPressed: () =>
                       context.navigateTo(const UpdateProfilePictureRoute()),
                   padding: const EdgeInsets.symmetric(
@@ -43,7 +43,7 @@ class RegisterBody extends StatelessWidget {
                   height: 16,
                 ),
                 ClickableText(
-                  text: AppStrings.alreadyHaveAnAccount,
+                  text: context.localizer.alreadyHaveAnAccount,
                   onTap: () => context.maybePop(),
                 ),
               ],

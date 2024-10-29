@@ -1,0 +1,22 @@
+{
+  "loginScreenHeader": "Login To Your Account",
+  "registerScreenHeader": "Sign Up For Free",
+  "emailHint": "Email",
+  "passwordHint": "Password",
+  "usernameHint": "Name",
+  "keepMeSigned": "Keep Me Signed In",
+  "orContinueText": "Or Continue With",
+  "forgotYourPassword": "Forgot Your Password?",
+  "dontHaveAnAccount": "Don't have an account?",
+  "nextText": "Next",
+  "firstOnBoardingHeaderTitle": "Find your Comfort Food here",
+  "firstOnBoardingHeaderSubTitle": "Here You Can find a chef or dish for every taste and color. Enjoy!",
+  "secondOnBoardingHeaderTitle": "Food Ninja is Where Your Comfort Food Lives",
+  "secondOnBoardingHeaderSubTitle": "Enjoy a fast and smooth food delivery at your doorstep",
+  "googleSignIn": "Sign in with Google",
+  "appleSignIn": "Sign in with Apple",
+  "login": "Login",
+  "register": "Create Account",
+  "confirmPassword": "Confirm password",
+  "alreadyHaveAnAccount": "Already have an account?"
+}
