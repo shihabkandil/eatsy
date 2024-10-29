@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../common/constants/app_strings.dart';
 import '../../../../../common/constants/gen/assets.gen.dart';
 import '../../../../../common/router/app_router.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../../../../../common/widgets/app_button.dart';
+import '../../../../../common/helpers/localizer_extension.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';
@@ -21,9 +21,7 @@ class LoginBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const AuthHeader(
-            text: AppStrings.loginScreenHeader,
-          ),
+          AuthHeader(text: context.localizer.loginScreenHeader),
           const SizedBox(height: 16),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -34,22 +32,22 @@ class LoginBody extends StatelessWidget {
                 const SizedBox(height: 4),
                 ClickableText(
                   alignment: Alignment.centerRight,
-                  text: AppStrings.forgotYourPassword,
+                  text: context.localizer.forgotYourPassword,
                   onTap: () {
                     ///TODO Route to ForgotPasswordRoute
                   },
                 ),
                 const SizedBox(height: 14),
                 AppButton(
-                  text: AppStrings.login,
+                  text: context.localizer.login,
                   onPressed: () => context.pushRoute(const HomeRoute()),
                 ),
                 const SizedBox(height: 14),
-                const Align(
+                Align(
                   alignment: Alignment.center,
                   child: Text(
-                    AppStrings.orContinueText,
-                    style: TextStyle(
+                    context.localizer.orContinueText,
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
@@ -60,7 +58,7 @@ class LoginBody extends StatelessWidget {
                   onPressed: () {
                     //TODO GoogleSignIn
                   },
-                  text: AppStrings.googleSignIn,
+                  text: context.localizer.googleSignIn,
                   assetPath: Assets.icons.google.path,
                 ),
                 const SizedBox(height: 14),
@@ -68,14 +66,14 @@ class LoginBody extends StatelessWidget {
                   onPressed: () {
                     ///TODO Facebook SignIn
                   },
-                  text: AppStrings.appleSignIn,
+                  text: context.localizer.appleSignIn,
                   assetPath: Assets.icons.apple.path,
                   background: Colors.black,
                   textColor: Colors.white,
                 ),
                 const SizedBox(height: 14),
                 ClickableText(
-                  text: AppStrings.dontHaveAnAccount,
+                  text: context.localizer.dontHaveAnAccount,
                   onTap: () => context.pushRoute(const RegisterRoute()),
                 ),
               ],

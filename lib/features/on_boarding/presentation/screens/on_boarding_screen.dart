@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 
 import '../../../../common/constants/app_colors.dart';
-import '../../../../common/constants/app_strings.dart';
+import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../common/constants/gen/assets.gen.dart';
 import '../../../../common/router/app_router.dart';
 import '../widgets/on_boarding_body.dart';
@@ -15,12 +15,12 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: AppStrings.nextText,
+      finishButtonText: context.localizer.nextText,
       onFinish: () => context.router.replace(const LoginRoute()),
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
         ),
       ),
       controllerColor: AppColors.lightGreen,
@@ -32,14 +32,14 @@ class OnBoardingScreen extends StatelessWidget {
       speed: 1.8,
       pageBodies: [
         OnBoardingBody(
-          title: AppStrings.firstOnBoardingHeaderTitle,
-          subTitle: AppStrings.firstOnBoardingHeaderSubTitle,
+          title: context.localizer.firstOnBoardingHeaderTitle,
+          subTitle: context.localizer.firstOnBoardingHeaderSubTitle,
           imagePath: Assets.images.illustrations.firstOnBoarding.path,
         ),
         OnBoardingBody(
           imagePath: Assets.images.illustrations.secondOnBoarding.path,
-          title: AppStrings.secondOnBoardingHeaderTitle,
-          subTitle: AppStrings.secondOnBoardingHeaderSubTitle,
+          title: context.localizer.secondOnBoardingHeaderTitle,
+          subTitle: context.localizer.secondOnBoardingHeaderSubTitle,
         ),
       ],
     );

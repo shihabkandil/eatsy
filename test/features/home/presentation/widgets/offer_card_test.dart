@@ -5,17 +5,20 @@ import 'package:flutter_svg_test/flutter_svg_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../app_pumper.dart';
+
 void main() {
   testWidgets('OfferCard displays correctly', (WidgetTester tester) async {
-    // Build the OfferCard widget
+    // Act
     await tester.pumpWidget(
-      const MaterialApp(
-        home: Scaffold(
+      const AppPumper(
+        child: Scaffold(
           body: OfferCard(),
         ),
       ),
     );
 
+    // Verify
     final DecoratedBox decoratedBox = tester.widget<DecoratedBox>(
       find.byType(DecoratedBox),
     );

@@ -4,6 +4,8 @@ import 'package:eatsy/features/on_boarding/presentation/widgets/on_boarding_body
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../../../app_pumper.dart';
+
 void main() {
   testWidgets('OnBoardingBody Widget', (widgetTester) async {
     const String title = 'Title Text';
@@ -11,8 +13,8 @@ void main() {
     final String imagePath = Assets.images.illustrations.firstOnBoarding.path;
 
     await widgetTester.pumpWidget(
-      MaterialApp(
-        home: OnBoardingBody(
+      AppPumper(
+        child: OnBoardingBody(
           title: title,
           imagePath: imagePath,
           subTitle: subTitle,

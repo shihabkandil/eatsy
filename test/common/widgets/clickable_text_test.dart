@@ -9,7 +9,7 @@ void main() {
   late Widget foodTestApp;
 
   setUp(() {
-    foodTestApp =  MaterialApp(
+    foodTestApp = MaterialApp(
         home: Scaffold(
           body: ClickableText(
             text: sampleText,

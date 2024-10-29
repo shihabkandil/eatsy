@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../../../app_pumper.dart';
+
 void main() {
   group('Test AppTextFormField', () {
     testWidgets('check properties', (widgetTester) async {
@@ -11,8 +13,8 @@ void main() {
       final FocusNode focusNode = FocusNode();
       const String assetPath = 'assets/icons/profile.svg';
       const bool isObscureText = true;
-      await widgetTester.pumpWidget(MaterialApp(
-        home: Scaffold(
+      await widgetTester.pumpWidget(AppPumper(
+        child: Scaffold(
           body: AppTextFormField(
             hintText: sampleText,
             focusNode: focusNode,
@@ -36,8 +38,8 @@ void main() {
     testWidgets('OnChangedCallback', (widgetTester) async {
       String changedText = '';
 
-      await widgetTester.pumpWidget(MaterialApp(
-        home: Scaffold(
+      await widgetTester.pumpWidget(AppPumper(
+        child: Scaffold(
           body: AppTextFormField(
             onChanged: (value) => changedText = value,
           ),
@@ -52,8 +54,8 @@ void main() {
     testWidgets('OnSubmittedCallback', (widgetTester) async {
       String submittedText = '';
 
-      await widgetTester.pumpWidget(MaterialApp(
-        home: Scaffold(
+      await widgetTester.pumpWidget(AppPumper(
+        child: Scaffold(
           body: AppTextFormField(
             onSubmitted: (value) => submittedText = value,
           ),

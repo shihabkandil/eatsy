@@ -34,6 +34,11 @@ Follow these steps to get started with the Food Delivery Application:
     flutter pub get
     ```
 
+   if localizations wasn't generated with above command consider using the one below.
+   ```bash
+   flutter gen-l10n
+   ```
+
 3. **Generate Code**: Run build_runner to generate necessary code, if needed.
 
     ```bash
