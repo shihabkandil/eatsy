@@ -48,7 +48,7 @@ class OnBoardingBody extends StatelessWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.black38,
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.w500,
               ),
             ),

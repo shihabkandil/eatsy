@@ -2,6 +2,8 @@ import 'package:eatsy/common/widgets/gradient_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../app_pumper.dart';
+
 void main() {
   group('GradientText widget', () {
     Gradient gradient = const LinearGradient(
@@ -12,12 +14,12 @@ void main() {
     late Widget foodTestApp;
 
     setUp(() {
-      foodTestApp =  MaterialApp(
-          home: Scaffold(
+      foodTestApp =  AppPumper(
+          child: Scaffold(
             body: GradientText(
               text: sampleText,
               gradient: gradient,
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 12),
             ),
           ),
       );

@@ -20,7 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: AppColors.lightGreen,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
         ),
       ),
       controllerColor: AppColors.lightGreen,

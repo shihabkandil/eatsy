@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../../../app_pumper.dart';
+
 void main() {
   group('OnBoarding Screen', () {
-    Widget onBoardingScreenWidget() {
-      return const MaterialApp(
-        home: OnBoardingScreen(),
-      );
-    }
+    Widget onBoardingScreenWidget() => const AppPumper(
+          child: OnBoardingScreen(),
+        );
 
     testWidgets('displays onBoarding Slider', (widgetTester) async {
       await widgetTester.pumpWidget(

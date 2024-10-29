@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../../../../app_pumper.dart';
+
 void main() {
   group("test social auth button", () {
     testWidgets("should view button with passed params", (widgetTester) async {
       // Arrange
       const String text = 'example';
 
-      await widgetTester.pumpWidget(MaterialApp(
-        home: Scaffold(
+      await widgetTester.pumpWidget(AppPumper(
+        child: Scaffold(
           body: SocialAuthButton(
             text: text,
             assetPath: Assets.icons.gallery.path,
@@ -46,8 +48,8 @@ void main() {
       bool isPressTriggered = false;
       const buttonText = 'example';
 
-      await widgetTester.pumpWidget(MaterialApp(
-        home: Scaffold(
+      await widgetTester.pumpWidget(AppPumper(
+        child: Scaffold(
           body: SocialAuthButton(
             text: buttonText,
             assetPath: Assets.icons.gallery.path,
