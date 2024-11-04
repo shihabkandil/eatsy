@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:eatsy/common/widgets/product_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,15 +13,30 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BackgroundPatternBaseScreen(
+    return BackgroundPatternBaseScreen(
         child: SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            HeaderBar(),
-            SizedBox(height: 12),
-            OfferCard(),
+            const HeaderBar(),
+            const SizedBox(height: 16),
+            const OfferCard(),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 260,
+              child: ListView(
+                padding: const EdgeInsets.all(4),
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  ProductCard(),
+                  SizedBox(width: 12),
+                  ProductCard(),
+                  SizedBox(width: 12),
+                  ProductCard(),
+                ],
+              ),
+            )
           ],
         ),
       ),
