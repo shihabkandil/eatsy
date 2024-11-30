@@ -112,7 +112,7 @@ void main() {
       expect(
         firstPageBodyWidget.subTitle,
         equals(
-            'Here You Can find a chef or dish for every taste and color. Enjoy!'),
+            'Here You Can find a chef or dish for every taste and color. Enjoy!',),
       );
       expect(
         firstPageBodyWidget.imagePath,

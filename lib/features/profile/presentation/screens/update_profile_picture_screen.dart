@@ -23,12 +23,12 @@ class UpdateProfilePictureScreen extends StatelessWidget {
             const EdgeInsets.symmetric(horizontal: 12),
         child: Column(children: [
           const Text(
-              "This data will be displayed in your account profile for security."),
+              'This data will be displayed in your account profile for security.',),
           const SizedBox(height: 20),
           VerticalSvgIconCard(
             width: double.maxFinite,
             svgPath: Assets.icons.gallery.path,
-            text: "From Gallery",
+            text: 'From Gallery',
             onPressed: () {
               context.pushRoute(const SelectAddressRoute());
             },
@@ -37,10 +37,10 @@ class UpdateProfilePictureScreen extends StatelessWidget {
           VerticalSvgIconCard(
             width: double.maxFinite,
             svgPath: Assets.icons.camera.path,
-            text: "Take Photo",
+            text: 'Take Photo',
             onPressed: () {},
           ),
-        ]),
+        ],),
       ),
     );
   }

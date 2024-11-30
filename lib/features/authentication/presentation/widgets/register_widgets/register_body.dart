@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../../common/router/app_router.dart';
-import 'register_form.dart';
 import '../../../../../common/widgets/app_button.dart';
 import '../../../../../common/widgets/clickable_text.dart';
 import '../auth_header.dart';
+import 'register_form.dart';
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({Key? key}) : super(key: key);

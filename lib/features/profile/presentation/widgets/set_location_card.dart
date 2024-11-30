@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:eatsy/common/router/app_router.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../common/router/app_router.dart';
 
 class SetLocationCard extends StatelessWidget {
   const SetLocationCard({

@@ -58,7 +58,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
                   onTap: () => setState(() => isTextHidden = !isTextHidden),
                   child: Icon(isTextHidden
                       ? CupertinoIcons.eye_slash_fill
-                      : CupertinoIcons.eye_fill),
+                      : CupertinoIcons.eye_fill,),
                 )
               : null,
           prefixIcon: widget.prefixIconSvgPath != null

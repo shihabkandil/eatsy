@@ -16,7 +16,7 @@ void main() {
           pressTriggered = true;
         },
         text: sampleText,
-      )),
+      ),),
     );
   });
 

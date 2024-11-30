@@ -8,11 +8,11 @@ import '../../../../app_pumper.dart';
 
 void main() {
   testWidgets(
-    "HomeScreen displays main sections correctly",
+    'HomeScreen displays main sections correctly',
     (widgetTester) async {
       await widgetTester.pumpWidget(const AppPumper(
         child: HomeScreen(),
-      ));
+      ),);
 
       expect(find.byType(BackgroundPatternBaseScreen), findsOneWidget);
 

@@ -7,8 +7,8 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../../app_pumper.dart';
 
 void main() {
-  group("test social auth button", () {
-    testWidgets("should view button with passed params", (widgetTester) async {
+  group('test social auth button', () {
+    testWidgets('should view button with passed params', (widgetTester) async {
       // Arrange
       const String text = 'example';
 
@@ -22,7 +22,7 @@ void main() {
             background: Colors.black,
           ),
         ),
-      ));
+      ),);
 
       // Assert
 
@@ -33,12 +33,12 @@ void main() {
 
       final MaterialButton button = widgetTester.widget(find.descendant(
           of: find.byType(SocialAuthButton),
-          matching: find.byType(MaterialButton)));
+          matching: find.byType(MaterialButton),),);
 
       expect(button.color, Colors.black);
 
       final buttonText = widgetTester.widget<Text>(find.descendant(
-          of: find.byType(SocialAuthButton), matching: find.byType(Text)));
+          of: find.byType(SocialAuthButton), matching: find.byType(Text),),);
 
       expect(buttonText.style?.color, Colors.red);
     });
@@ -56,7 +56,7 @@ void main() {
             onPressed: () => isPressTriggered = !isPressTriggered,
           ),
         ),
-      ));
+      ),);
 
       expect(isPressTriggered, false);
 

@@ -2,10 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/constants/gen/assets.gen.dart';
-import '../../../../../common/router/app_router.dart';
-import '../../../../../common/widgets/clickable_text.dart';
-import '../../../../../common/widgets/app_button.dart';
 import '../../../../../common/helpers/localizer_extension.dart';
+import '../../../../../common/router/app_router.dart';
+import '../../../../../common/widgets/app_button.dart';
+import '../../../../../common/widgets/clickable_text.dart';
 import '../auth_header.dart';
 import 'login_form.dart';
 import 'social_auth_button.dart';

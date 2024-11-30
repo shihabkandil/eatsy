@@ -24,7 +24,7 @@ class SelectAddressScreen extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-                "This data will be used when delivering food to your doorstep."),
+                'This data will be used when delivering food to your doorstep.',),
             const SizedBox(height: 16),
             DecoratedBox(
               decoration: BoxDecoration(
@@ -40,15 +40,15 @@ class SelectAddressScreen extends StatelessWidget {
                       children: [
                         Assets.icons.location.svg(),
                         const SizedBox(width: 12),
-                        const Text('Your Location')
+                        const Text('Your Location'),
                       ],
                     ),
                     const SizedBox(height: 6),
-                    const SetLocationCard()
+                    const SetLocationCard(),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

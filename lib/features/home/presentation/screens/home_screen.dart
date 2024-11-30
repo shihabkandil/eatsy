@@ -1,9 +1,10 @@
-import 'package:auto_route/annotations.dart';
-import 'package:eatsy/common/widgets/product_card.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../common/router/app_router.dart';
 import '../../../../common/widgets/background_pattern_base_screen.dart';
+import '../../../../common/widgets/vertical_product_card.dart';
 import '../widgets/header_bar.dart';
 import '../widgets/offer_card.dart';
 
@@ -24,22 +25,30 @@ class HomeScreen extends StatelessWidget {
             const OfferCard(),
             const SizedBox(height: 16),
             SizedBox(
-              height: 260,
+              height: 280,
               child: ListView(
                 padding: const EdgeInsets.all(4),
                 scrollDirection: Axis.horizontal,
-                children: const [
-                  ProductCard(),
-                  SizedBox(width: 12),
-                  ProductCard(),
-                  SizedBox(width: 12),
-                  ProductCard(),
+                children: [
+                  VerticalProductCard(
+                    onTap: () {
+                      context.pushRoute(const ProductDetailRoute());
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  VerticalProductCard(
+                    onTap: () {},
+                  ),
+                  const SizedBox(width: 12),
+                  VerticalProductCard(
+                    onTap: () {},
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
-    ));
+    ),);
   }
 }

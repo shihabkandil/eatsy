@@ -9,7 +9,7 @@ class AppButton extends StatelessWidget {
       required this.onPressed,
       this.height,
       this.width,
-      this.padding})
+      this.padding,})
       : super(key: key);
   final String text;
   final void Function() onPressed;
@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            gradient: AppColors.greenGradient),
+            gradient: AppColors.greenGradient,),
         child: Container(
           height: height,
           width: width,

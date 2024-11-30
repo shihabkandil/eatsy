@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../../common/constants/gen/assets.gen.dart';
+import '../../../../../common/helpers/localizer_extension.dart';
 import '../../../../../common/widgets/app_text_form_field.dart';
 
 class RegisterForm extends StatelessWidget {

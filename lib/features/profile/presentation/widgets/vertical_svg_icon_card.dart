@@ -1,8 +1,8 @@
-import 'package:eatsy/common/constants/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../common/constants/app_colors.dart';
+import '../../../../common/constants/ui_constants.dart';
 
 class VerticalSvgIconCard extends StatelessWidget {
   const VerticalSvgIconCard(
@@ -11,7 +11,7 @@ class VerticalSvgIconCard extends StatelessWidget {
       required this.text,
       required this.onPressed,
       this.width,
-      this.height});
+      this.height,});
 
   final String svgPath;
   final String text;

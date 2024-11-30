@@ -13,7 +13,7 @@ class HeaderBar extends StatelessWidget {
       children: [
         const Expanded(
           child: Text(
-            "Find Your\nFavourite Food",
+            'Find Your\nFavourite Food',
             style: TextStyle(fontSize: 32),
           ),
         ),
@@ -23,7 +23,7 @@ class HeaderBar extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(8.0),
             child: Badge(
-              label: Text("2"),
+              label: Text('2'),
               padding: EdgeInsets.zero,
               backgroundColor: Colors.red,
               isLabelVisible: true,
@@ -34,7 +34,7 @@ class HeaderBar extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

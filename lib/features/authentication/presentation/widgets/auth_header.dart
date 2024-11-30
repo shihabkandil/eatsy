@@ -15,7 +15,7 @@ class AuthHeader extends StatelessWidget {
           height: MediaQuery.sizeOf(context).height * 0.28,
           child: Transform.scale(
             scale: 1.6,
-            child: Assets.images.logo.logoGreen.image()
+            child: Assets.images.logo.logoGreen.image(),
           ),
         ),
         Text(

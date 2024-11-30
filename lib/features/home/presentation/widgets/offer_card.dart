@@ -38,7 +38,7 @@ class OfferCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         const Text(
-                          "Special Deal For \nOctober",
+                          'Special Deal For \nOctober',
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
@@ -52,16 +52,16 @@ class OfferCard extends StatelessWidget {
                           ),
                           onPressed: () {},
                           child: const Text(
-                            "Buy Now",
+                            'Buy Now',
                             style: TextStyle(color: AppColors.green),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

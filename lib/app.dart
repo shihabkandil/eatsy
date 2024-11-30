@@ -22,7 +22,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       routerDelegate: appRouter.delegate(),
       routeInformationParser: appRouter.defaultRouteParser(),
-      theme: ThemeData(fontFamily: 'Poppins'),
+      theme: ThemeData(),
     );
   }
 }

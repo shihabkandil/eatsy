@@ -5,7 +5,7 @@ import '../constants/gen/assets.gen.dart';
 
 class BackgroundPatternBaseScreen extends StatelessWidget {
   const BackgroundPatternBaseScreen(
-      {Key? key, required this.child, this.alignment = Alignment.center})
+      {Key? key, required this.child, this.alignment = Alignment.center,})
       : super(key: key);
   final Widget child;
   final AlignmentGeometry alignment;
@@ -29,7 +29,7 @@ class BackgroundPatternBaseScreen extends StatelessWidget {
               ),
             ),
           ),
-          child
+          child,
         ],
       ),
     );
