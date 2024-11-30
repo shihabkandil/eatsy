@@ -16,13 +16,6 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# Router related
-
-*.gr.dart
-
-# Assets generated
-/lib/common/constants/gen
-
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -34,13 +27,9 @@ migrate_working_dir/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
-.packages
 .pub-cache/
 .pub/
 /build/
-
-# Localization related
-lib/l10n/generated/
 
 # Symbolication related
 app.*.symbols
@@ -53,3 +42,28 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Router related
+*.gr.dart
+
+# Assets generated
+/lib/common/constants/gen
+
+/lib/generated/locale_keys.g.dart
+
+# Freezed related
+*.freezed.dart
+*.g.dart
+
+
+/ios/Podfile.lock
+/lib/core/injector/locator.config.dart
+/syncfusion_flutter_charts-25.1.40/
+/.env
+
+/pubspec.lock
+
+# FVM Version Cache
+.fvm/
+
+# Localization related
+lib/l10n/generated/
