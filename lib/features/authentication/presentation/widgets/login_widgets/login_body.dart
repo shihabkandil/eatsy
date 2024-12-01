@@ -40,7 +40,7 @@ class LoginBody extends StatelessWidget {
                 const SizedBox(height: 14),
                 AppButton(
                   text: context.localizer.login,
-                  onPressed: () => context.pushRoute(const HomeRoute()),
+                  onPressed: () => context.pushRoute(MainRoute()),
                 ),
                 const SizedBox(height: 14),
                 Align(

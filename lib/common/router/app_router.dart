@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
 import '../../features/authentication/presentation/screens/login_screen.dart';
 import '../../features/authentication/presentation/screens/register_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/main/presentation/screens/main_screen.dart';
 import '../../features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import '../../features/products/presentation/screens/product_details_screen.dart';
 import '../../features/profile/presentation/screens/profile_success_screen.dart';
@@ -53,7 +55,7 @@ class AppRouter extends RootStackRouter {
           reverseDurationInMilliseconds: 150,
         ),
         CustomRoute(
-          page: HomeRoute.page,
+          page: MainRoute.page,
           transitionsBuilder: TransitionsBuilders.slideLeft,
           durationInMilliseconds: 150,
           reverseDurationInMilliseconds: 150,
